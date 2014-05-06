@@ -8,8 +8,8 @@
     {% endfor %}
     </ul>
 {% else %}
-	<p>News:</p>
-    <p>No news articles are available.</p>
+	<ul><p>News:</p>
+    <p>No news articles are available.</p></ul>
 {% endif %}
 
 {% if latest_announcement_list %}
@@ -20,8 +20,8 @@
     {% endfor %}
     </ul>
 {% else %}
-	<p>Announcements:</p>
-	<p>No announcements are available.</p>
+	<ul><p>Announcements:</p>
+	<p>No announcements are available.</p></ul>
 {% endif %}
 
 {% if latest_event_list %}
@@ -32,6 +32,19 @@
     {% endfor %}
     </ul>
 {% else %}
-	<p>Events:</p>
-    <p>No events are available.</p>
+	<ul><p>Events:</p>
+    <p>No events are available.</p></ul>
+{% endif %}
+
+{% if carousel_images %}
+    <ul>
+    <p>Carousel:</p>
+    {% for image in carousel_images %}
+        <li><img src="/media/{{ image.image }}"></li>
+        <li>{{ image.caption }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Carousel:</p>
+    <p>No images are available.</p>
 {% endif %}
