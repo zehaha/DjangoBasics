@@ -16,3 +16,5 @@ They're for the layout team, so that they know how to show the model variables.
 
 You can now upload images! The image app is in the admin page. Just use the ImageField to upload a file. It will automatically be sent to the media folder, under images. I added some samples to the homepage. Look at the home template to see how to serve images from the media folder.  
 IMPORTANT NOTE: For the image app to work, you need to install a Python program called Pillow, a Python Imaging Library fork. Just open the command prompt and enter "pip install pillow", like what you did with Django.
+
+Integrated layout with back-end! See DCS_Website/views.py and templates/home/home.html to see how to fetch data from the database.
