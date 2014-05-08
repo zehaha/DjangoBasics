@@ -6,6 +6,14 @@
 </ul>
 -->
 
+<!--
+<ul>
+<li><p>{{ announcement.pub_date }}</li>
+<li><p>{{ announcement.title }}</li>
+<li><p>{{ announcement.body }}</li>
+</ul>
+-->
+
 {% load staticfiles %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -48,9 +56,7 @@ ddsmoothmenu.init({
 
 </script> 
 <img src="{% static "images/DCS_logo.png" %}" class='image'>
-<!-- Load the CloudCarousel JavaScript file -->
-<script type="text/JavaScript" src="{% static "js/cloud-carousel.1.0.5.js" %}"></script>
-
+ 
 </head>
 
 <body id="home">
@@ -80,7 +86,7 @@ ddsmoothmenu.init({
 </div>	<!-- END of templatemo_header_wrapper -->
 	<!-- END of templatemo_header_wrapper -->
 
-<div id="news_content_wrapper", style="padding-top:150px;">
+<div id="announcement_content_wrapper", style="padding-top:150px;">
 	<div class = "container", style="padding-left:150px;padding-right:150px">
 		<body>
 		<h1 align="center">
