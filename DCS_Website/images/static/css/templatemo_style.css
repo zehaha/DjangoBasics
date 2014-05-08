@@ -600,6 +600,8 @@ p.position {
 	float:left;
 	z-index:100;
 	position:absolute;
+	margin-top: 30px;
+	margin-left: 100px;
 }
 .footer_list { 
 	margin: 0; 
