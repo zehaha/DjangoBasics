@@ -1,0 +1,49 @@
+<h1>University of the Philippines Diliman - Department of Computer Science</h1>
+
+{% if faculty_list %}
+	<h3>Faculty</h3>
+    <ul><b>Assistant Professors</b>
+    {% for faculty in faculty_assistant_list %}
+        <p><dd><a href="/people/{{ faculty.pk }}/faculty_details/">{{faculty.last_name }}, {{faculty.first_name }} {{faculty.middle_name}}</a></dd></p>
+    {% endfor %}
+    </ul>
+	
+	<ul><b>Associate Professors</b>
+    {% for faculty in faculty_associate_list %}
+        <p><dd><a href="/people/{{ faculty.pk }}/faculty_details/">{{faculty.last_name }}, {{faculty.first_name }} {{faculty.middle_name}}</a></dd></p>
+    {% endfor %}
+	</ul>
+
+	<ul><b>Instructors</b>
+    {% for faculty in faculty_instructor_list %}
+        <p><dd><a href="/people/{{ faculty.pk }}/faculty_details/">{{faculty.last_name }}, {{faculty.first_name }} {{faculty.middle_name}}</a></dd></p>
+    {% endfor %}
+	</ul>	
+{% else %}
+	<h3>Faculty</h3>
+    <p>No faculty members are available.</p>
+{% endif %}
+
+{% if student_list %}
+	<h3>Students</h3>
+    <ul>
+    {% for student in student_list %}
+        <p><a href="/people/{{ student.pk }}/student_details/">{{student.org_name }}</a></p>
+    {% endfor %}
+    </ul>
+{% else %}
+   <h3>Students</h3>
+   <p>No students are available.</p>
+{% endif %}
+
+{% if staff_list %}
+    <h3>Staff</h3>
+	<ul>
+    {% for staff in staff_list %}
+        <p><a href="/people/{{ staff.pk }}/staff_details/">{{staff.first_name }} {{staff.last_name }}</a></p>
+    {% endfor %}
+    </ul>
+{% else %}
+    <h3>Staff:</h3>
+    <p>No staff members are available.</p>
+{% endif %}

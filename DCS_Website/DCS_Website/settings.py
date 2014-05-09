@@ -41,7 +41,8 @@ INSTALLED_APPS = (
     'announcements',
     'events',
     'news',
-    'images'
+    'images',
+    'people'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -73,7 +74,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC+8'
+TIME_ZONE = ''
 
 USE_I18N = True
 

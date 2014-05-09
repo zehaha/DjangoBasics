@@ -16,6 +16,8 @@ urlpatterns = patterns('',
     url(r'^news/', include('news.urls')),
     url(r'^events/', include('events.urls')),
     url(r'^announcements/', include('announcements.urls')),
+    url(r'^index/people/', 'DCS_Website.views.pipz', name='people'),
+    url(r'^people/', include('people.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
             'document_root': settings.MEDIA_ROOT,
