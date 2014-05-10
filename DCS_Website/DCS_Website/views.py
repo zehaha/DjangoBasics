@@ -18,3 +18,9 @@ def home(request):
     			'carousel_images' : carousel_images,
     			}
     return render(request, 'home/home.html', context)
+
+def about(request):
+    gallery_images = Image.objects.order_by('-id').filter(models.Q(shown_in='g') | models.Q(shown_in='b'))[:6]
+    context = {'gallery_images' : gallery_images,
+                }
+    return render(request, 'about/about.html', context)

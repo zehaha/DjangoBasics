@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+	padding: 0;
+	color: #6e6e6e;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 13px;
+	line-height: 1.4em; 
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.container
+{
+	margin: 0 auto;
+	opacity: 0.5;
+}
+
+#home{
+	/*background-image: url(../images/DCS_background1.jpg); */
+	background-image: url(../images/aboutBG.jpg);
+	background-repeat: no-repeat;
+	background-size:100% 800px;
+}
+
+a, a:link, a:visited { 
+	/*Ito ay hindi Binago*/
+	color: #7f0d0d; 
+	font-weight: normal; 
+	text-decoration: none;
+}
+
+a:hover { 
+	/*Ito ay hindi Binago*/
+	text-decoration: underline;
+}
+
+a.more { 
+	/*Ito ay hindi Binago*/
+	display: inline-block; 
+	padding-left: 12px; 
+	background: url(../images/templatemo_list.png) no-repeat 0 4px; 
+}
+
+.container-fluid {
+	padding-right: 20px;
+}
+
+.nav-sidebar {
+	float: left;
+}
+
+
+
