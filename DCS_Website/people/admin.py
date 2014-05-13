@@ -12,14 +12,14 @@ class FacultyAdmin(admin.ModelAdmin):
 	search_fields = ['first_name', 'last_name','position']
 
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ('org_name', 'description','logo')
-    list_filter = ['org_name']
-    search_fields = ['org_name']
+	list_display = ('org_name', 'description','logo')
+	list_filter = ['org_name']
+	search_fields = ['org_name']
 	
 class StaffAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'middle_name', 'last_name','position', 'room')
-    list_filter = ['position']
-    search_fields = ['first_name', 'last_name', 'position', 'room']
+	list_display = ('first_name', 'middle_name', 'last_name','position', 'room')
+	list_filter = ['position']
+	search_fields = ['first_name', 'last_name', 'position', 'room']
 
 admin.site.register(Faculty, FacultyAdmin)
 admin.site.register(Student, StudentAdmin)
