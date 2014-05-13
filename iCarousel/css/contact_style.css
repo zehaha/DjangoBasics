@@ -3,7 +3,6 @@
 	width:60%;
 	height:60%;
 	margin: 0 auto;
-<<<<<<< HEAD
 		margin-top: 10px;
 		margin-bottom: 50px;
 	padding-left: 35px;
@@ -50,12 +49,4 @@ textarea:focus, input:focus{
  border-color:black;
  border:1px	solid;
 }
-=======
-	margin-top: 100 px;
-	padding-left: 35px;
-	padding-right: 35px;
-	padding-bottom: 40px;
-	padding-top: 5px;
-	border-radius: 10px;
-}
->>>>>>> ddc0216a96113b1e101bcba70c32c5ebff3fee10
+

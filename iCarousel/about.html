@@ -8,7 +8,76 @@
 		<script src="js/Home_jqueryMenu.js"></script>
 		<script src="js/Home_functionMenu.js"></script>
 		<script type='text/javascript' src='js/Footer_footer.js'></script>
+
+		<!-- highslide -->
+		<script type="text/javascript" src="js/About_highslide-full.js"></script>
 		
+		<script src="js/About_jquery.min.js"></script>
+		<script src="js/About_jquery.scrollTo.min.js"></script>
+		<script src="js/About_jquery.localScroll.js"></script>
+		<script type="text/javascript">
+		jQuery(function( $ ){
+			/**
+			 * Most jQuery.localScroll's settings, actually belong to jQuery.ScrollTo, check it's demo for an example of each option.
+			 * @see http://flesler.demos.com/jquery/scrollTo/
+			 * You can use EVERY single setting of jQuery.ScrollTo, in the settings hash you send to jQuery.LocalScroll.
+			 */
+			
+			// The default axis is 'y', but in this demo, I want to scroll both
+			// You can modify any default like this
+			$.localScroll.defaults.axis = 'xy';
+			
+			/**
+			 * NOTE: I use $.localScroll instead of $('#navigation').localScroll() so I
+			 * also affect the >> and << links. I want every link in the page to scroll.
+			 */
+			$.localScroll({
+				target: '#content', // could be a selector or a jQuery object too.
+				queue:true,
+				duration:1000,
+				hash:true,
+				onBefore:function( e, anchor, $target ){
+					// The 'this' is the settings object, can be modified
+				},
+				onAfter:function( anchor, settings ){
+					// The 'this' contains the scrolled element (#content)
+				}
+			});
+		});
+	</script>
+
+		<!-- highslide script -->
+		<script type="text/javascript">
+		hs.graphicsDir = 'graphics/';
+		hs.align = 'center';
+		hs.transitions = ['expand', 'crossfade'];
+		hs.fadeInOut = true;
+		hs.dimmingOpacity = 0.8;
+		hs.outlineType = 'rounded-white';
+		hs.captionEval = 'this.thumb.alt';
+		hs.marginBottom = 105; // make room for the thumbstrip and the controls
+		hs.numberPosition = 'caption';
+
+		// Add the slideshow providing the controlbar and the thumbstrip
+		hs.addSlideshow({
+		//slideshowGroup: 'group1',
+		interval: 5000,
+		repeat: false,
+		useControls: true,
+		overlayOptions: {
+			className: 'text-controls',
+			position: 'bottom center',
+			relativeTo: 'viewport',
+			offsetY: -60
+		},
+		thumbstrip: {
+			position: 'bottom center',
+			mode: 'horizontal',
+			relativeTo: 'viewport'
+		}
+	});
+	</script>
+
 		<meta name="viewport" content="width=1024, initial-scale=1, maximum-scale=1">
 		<link rel="stylesheet" href="css/Home_styles.css" />
 		<link rel="stylesheet" href="css/Home_icarousel.css" />
@@ -16,9 +85,7 @@
 		
 		<link rel="stylesheet" href="css/about_style.css" />
 
-		
-		<link rel="stylesheet" href="css/about_style.css" />
-
+		<link rel="stylesheet" type="text/css" href="css/highslide.css" />
 
 
 		
@@ -37,10 +104,10 @@
 							<li class="parent">
 								<a href="about.html">About</a>
 								<ul class="sub-menu">
-									<li><a href="">    About</a></li>
-									<li><a href="">    Mission</a></li>
-									<li><a href="">    Vision</a></li>
-									<li><a href="">    Gallery</a></li>
+									<li><a href="#section1">    About</a></li>
+									<li><a href="#section2">    Vision</a></li>
+									<li><a href="#section3">    Mission</a></li>
+									<li><a href="#section4">    Gallery</a></li>
 									</li>
 								</ul>
 							</li>
@@ -108,6 +175,7 @@
 					</p>
 				</div>
 			</div>
+
 		<div class="box1">
 			<img src='UP.png' class="right"/>
 			<div class='contain-quick'>
@@ -123,44 +191,56 @@
 					</p>
 				</div>
 				</div>
-<<<<<<< HEAD
-		<!--Carousel-->
-=======
->>>>>>> ddc0216a96113b1e101bcba70c32c5ebff3fee10
-				
-		<!--About Content-->
-		    <div class="aboutBox">
-			  <section id="about">
-				<h1>About the Department</h1><hr>
-				<p>The Department of Computer Science is one of the eight departments in the College of Engineering (COE), 
-				University of the Philippines Diliman (UPD). the road to establishing the youngest department in COE
-				started in the mid 1970's with the institution of the Master of Engineering in Computer Science 
-				(MEnng CS) program, a joint undertaking of the Department of Engineering Sciences (as the lead 
-				department), the Department of Electrical Engineering and the Department of Mathematics of the the
-				College of Science.</p>
-				
-				<p>In the early 1980's, the MEngg CS program was suspended as the Bachelor in Computer Science (BCS) was
-				instituted. As with the master's program, the BCS program was also a joint undertaking of the ES, EE, 
-				and Math departments. An initial batch of 35 shiftees from more than 200 applicants from various colleges
-				in the UPD were admitted into the program in the second semester of AY 1982-1983. Of the 35, 32 finished 
-				the course, 12 with latin honors. In this first batch of Computer Science graduates was the 1986 
-				Engineering class valedictorian.</p>
-				
-				<p>In August 1988, the BOR approved the renaming of the ES department to 'Department of Engineering and 
-				Computer Sciences (ECS)' to reflect the expertise available in the department. Three years later, in 
-				August 1991, the ECS was split into two independent departments - taking ES back to its original name
-				(Department of Engineering Sciences) and bringing to life the Department of Computer Science (DCS). The new department took full responsibility of offering the BCS program, which was subsequently renamed
-				Bachelor of Science in Computer Science program.</p>
+							<div class="box2">
+			<div class='contain-quick'>
+				<h3 class='meh'>Navigation</h3>
+					<hr>
+					<p class='Quick'>
+			<a href="#section1">About</a></br></br>
+			<a href="#section2">Vision</a></br></br>
+			<a href="#section3">Mission</a></br></br>
+			<a href="#section4">Gallery</a></br></br>
+					</p>
+				</div>
+				</div>
 
-				<p>In May 1995, twenty years after the institution of the 
-				pioneering, but now defunct, MEngg CS program, the BOR approved the institution of a new Master of 
-				Science in Computer Science (MSCS) program. Both the BSCS and MSCS program continue to attract some 
-				of the best students in UP Diliman.</p>
+	<div id="content">
+		<div class="section">
+			<ul>
+				<li class="sub" id="section1">
+					<h2>About the Department</h2>
+					<hr>
+					<p>The Department of Computer Science is one of the eight departments in the College of Engineering (COE), 
+					University of the Philippines Diliman (UPD). the road to establishing the youngest department in COE
+					started in the mid 1970's with the institution of the Master of Engineering in Computer Science 
+					(MEnng CS) program, a joint undertaking of the Department of Engineering Sciences (as the lead department), the Department of Electrical Engineering and the Department of Mathematics of the the
+					College of Science.</p>
 				
-				<p>As of the end of the seconds semester of AY 2009-2010, the BCS/BSCS program has produced a total of 
-				1191 graduates, 224 with Latin honors: 161 cum laude, 59 magna cum laude and 4 summa cum laude.</p>
+					<p>In the early 1980's, the MEngg CS program was suspended as the Bachelor in Computer Science (BCS) was
+					instituted. As with the master's program, the BCS program was also a joint undertaking of the ES, EE, 
+					and Math departments. An initial batch of 35 shiftees from more than 200 applicants from various colleges
+					in the UPD were admitted into the program in the second semester of AY 1982-1983. Of the 35, 32 finished 
+					the course, 12 with latin honors. In this first batch of Computer Science graduates was the 1986 
+					Engineering class valedictorian.</p>
 				
-				<p>Since its establishment in 1991, seven faculty members have served as DCS chair:</p>
+					<p>In August 1988, the BOR approved the renaming of the ES department to 'Department of Engineering and 
+					Computer Sciences (ECS)' to reflect the expertise available in the department. Three years later, in 
+					August 1991, the ECS was split into two independent departments - taking ES back to its original name
+					(Department of Engineering Sciences) and bringing to life the Department of Computer Science (DCS). The new department took full responsibility of offering the BCS program, which was subsequently renamed
+					Bachelor of Science in Computer Science program.</p>
+
+					<a href="#section1b" class="next">more&gt;&gt;</a>
+				</li>
+				<li class="sub" id="section1b">
+					<p>In May 1995, twenty years after the institution of the 
+					pioneering, but now defunct, MEngg CS program, the BOR approved the institution of a new Master of 
+					Science in Computer Science (MSCS) program. Both the BSCS and MSCS program continue to attract some 
+					of the best students in UP Diliman.</p>
+				
+					<p>As of the end of the seconds semester of AY 2009-2010, the BCS/BSCS program has produced a total of 
+					1191 graduates, 224 with Latin honors: 161 cum laude, 59 magna cum laude and 4 summa cum laude.</p>
+
+					<p>Since its establishment in 1991, seven faculty members have served as DCS chair:</p>
 				
 				<ul>
 					<li>Prof. Evangel P. Quiwa (October 1991-October 1995)</li>
@@ -177,59 +257,72 @@
 				<p>Initially located in the College of Engineering Building (Melchor Hall), the Department of Computer 
 				Science moved to its new home at the Computer Science and Engineering Library Building 
 				( UP Alumni Engineers Centennial Hall) on Velasquez St., UP Diliman campus, in January 2007.</p>
-			  </section>
-			  <section id="vision">
-				<h1>Vision</h1><hr>
-				<p>The Department of Computer Science will be a world-class research and teaching institution in the 
-				field of Computer Science that serves the interest of the country.</p>
-			  </section>
-			  <section id="mission">
-				<h1>Mission</h1><hr>
-				<p>The mission of the Department of Computer Science is to produce graduates equipped with the 
-				knowledge and skills required for professional careers and advanced studies in computer science, 
-				to advance the discipline of computing through internationally-recognized research and development;
-				to foster an environment that promotes academic excellence, professionalism and social responsibility; 
-				and to address the needs of education, government and industry through extension projects and continuing
-				education programs.</p>
-			  </section>
-			  <section id="gallery">
-				<!--table class="table"><th-->
-				<h1>Gallery</h1>
-				<!--/th><th>
-				<div class="upload">
-					<font size=1.5>
-					<form action="http://dcs.upd.edu.ph/index.php/main/about" method="post" accept-charset="utf-8" enctype="multipart/form-data"><input type="file" name="userfile" value=""  /><input type="submit" name="upload" value="Upload"  /></form>			</font>
-				</div>
-				</th>
-				</table-->
-				<p><br>
-				  <div class="gallery-list">
-					<table class="table"><tr><td>
-					  <div class='thumb'>
-									<a class='group3' href=http://dcs.upd.edu.ph/assets/uploads/03ce5-IMG_0854.png>
-										<img src = http://dcs.upd.edu.ph/assets/uploads/thumbs/03ce5-IMG_0854.png>
-									</a>
-								</div><div class='thumb'>
-									<a class='group3' href=http://dcs.upd.edu.ph/assets/uploads/d6cc2-qIMG_0845.png>
-										<img src = http://dcs.upd.edu.ph/assets/uploads/thumbs/d6cc2-qIMG_0845.png>
-									</a>
-								</div>			  </td><tr><td><center>
-									  </td></tr></center></table>
-				  </div>
-				</p>
-			  </section>
-			  <div class="row">
-			  </div> 
-			</div>
-				
-		  </div>
-		</div>
 
-		<!--About Content end-->
-<<<<<<< HEAD
->>>>>>> 70238f2ad17122e911001cbcb4c44a2d9e30b335
-=======
->>>>>>> ddc0216a96113b1e101bcba70c32c5ebff3fee10
+					<a href="#section1" class="prev">&lt;&lt;</a>
+					<a href="#section1c" class="next">&gt;&gt;</a>					
+				</li>
+			</ul>
+		</div>
+		<div class="section">
+			<ul>
+				<li class="sub" id="section2" >
+					<h2>Vision</h2>
+					<hr>
+					<p>The Department of Computer Science will be a world-class research and teaching institution in the 
+					field of Computer Science that serves the interest of the country.</p>
+				</li>
+			</ul>
+		</div>
+		<div class="section">
+			<ul>
+				<li class="sub" id="section3">
+					<h2>Mission</h2>
+					<hr>
+					<p>The mission of the Department of Computer Science is to produce graduates equipped with the 
+					knowledge and skills required for professional careers and advanced studies in computer science, 
+					to advance the discipline of computing through internationally-recognized research and development;
+					to foster an environment that promotes academic excellence, professionalism and social responsibility; 
+					and to address the needs of education, government and industry through extension projects and continuing
+					education programs.</p>
+				</li>
+			</ul>
+		</div>
+		<div class="section">
+			<ul>
+				<li class="sub" id="section4">
+					<h2>Gallery</h2>
+					<hr>
+					<!-- GALLERY CONTENTS -->
+					<a class='highslide' href='images/thumbstrip01.jpg' onclick="return hs.expand(this)">
+						<img src='images/thumbstrip01.thumb.png' alt='Mountain valley'/></a>
+
+					<a class='highslide' href='images/thumbstrip02.jpg' onclick="return hs.expand(this)">
+						<img src='images/thumbstrip02.thumb.png' alt='Windy landscape'/></a>
+
+					<a class='highslide' href='images/thumbstrip03.jpg' onclick="return hs.expand(this)">
+						<img src='images/thumbstrip03.thumb.png' alt='Sunset in the mountain'/></a>
+
+					<a class='highslide' href='images/thumbstrip04.jpg' onclick="return hs.expand(this)">
+						<img src='images/thumbstrip04.thumb.png' alt='Resting skier'/></a>
+
+					<a class='highslide' href='images/thumbstrip05.jpg' onclick="return hs.expand(this)">
+						<img src='images/thumbstrip05.thumb.png' alt='Contemplating dog'/></a>
+
+					<a class='highslide' href='images/thumbstrip06.jpg' onclick="return hs.expand(this)">
+						<img src='images/thumbstrip06.thumb.png' alt='Cabins'/></a>
+
+					<a class='highslide' href='images/thumbstrip07.jpg' onclick="return hs.expand(this)">
+						<img src='images/thumbstrip07.thumb.png' alt='Dark skies in sunny landscape'/></a>
+
+					
+				</li>
+			</ul>
+		</div>
+		
+	</div>
+
+	<!-- SCROLL SAMPLE END -->
+
 	</body>
 	<footer>
 		<div class='text1'>Copyright &copy; 2014 Department of Computer Science</div>
@@ -243,18 +336,8 @@
 		<script src="js/Home_jquery.easing.1.3.js"></script>
         
 
-<<<<<<< HEAD
-
-=======
 		<script src="js/Home_icarousel.js"></script>
-		<script>
-			$(window).scroll(function(){
-				window.scrollTo(0,0);
-			});
-var b='$(8).h(2(){$("#4").6({7:5,9:a,b:"c\\d",e:"f",g:"1",i:"j",k:"l",m:3,n:0.5,o:"#p",q:r,s:t})}); | split |Spielen|function||icarousel||iCarousel|slides|document|slidesSpace|200|nextLabel|N|u00e4chste|previousLabel|Vorherige|playLabel|ready|pauseLabel|Pause|timer|360Bar|timerPadding|timerOpacity|timerColor|0F0|timerX|15|timerY|30 replace  \\w+ \\b g'.split(" ");
-eval(function(e,g,a,d,c,f){c=function(a){return a.toString(g)};if(!b[5][b[4]](/^/,String)){for(;a--;)f[c(a)]=d[a]||c(a);d=[function(a){return f[a]}];c=function(){return b[6]};a=1}for(;a--;)d[a]&&(e=e[b[4]](RegExp(b[7]+c(a)+b[7],b[8]),d[a]));return e}(b[0],30,30,b[3][b[2]](b[1]),0,{}));
-		</script>
+		
 	<!--Footer-->
->>>>>>> ddc0216a96113b1e101bcba70c32c5ebff3fee10
 	
 </html>
