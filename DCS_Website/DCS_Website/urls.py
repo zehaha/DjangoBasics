@@ -7,6 +7,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 admin.autodiscover()
 
+"""Use a regular expression to request the object by its primary key and execute
+the corresponding view when the object is found."""
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'DCS_Website.views.home', name='home'),
@@ -17,7 +19,11 @@ urlpatterns = patterns('',
     url(r'^events/', include('events.urls')),
     url(r'^announcements/', include('announcements.urls')),
     url(r'^about/', 'DCS_Website.views.about'),
-    url(r'^index/people/', 'DCS_Website.views.pipz', name='people'),
+    url(r'^people/', include('people.urls')),
+    url(r'^programs/BS CS Curriculum/download', 'DCS_Website.views.download_BS_CS_Curriculum'),
+    url(r'^programs/MS CS Curriculum/download', 'DCS_Website.views.download_MS_CS_Curriculum'),
+    url(r'^programs/PhD CS Curriculum/download', 'DCS_Website.views.download_PhD_CS_Curriculum'),
+    url(r'^programs/', 'DCS_Website.views.programs'),
     url(r'^people/', include('people.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
