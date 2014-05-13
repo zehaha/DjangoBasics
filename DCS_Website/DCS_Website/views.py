@@ -11,6 +11,10 @@ from images.models import Image
 
 # Create your views here.
 def home(request):
+    """Fetch the requested objects with the given primary keys from the database,
+    creat context by assigning the objects to corresponding variables in the template,
+    and render the page using the context and the template in the given directory.
+    """
     latest_news_article_list = NewsArticle.objects.order_by('-pub_date')[:3]
     latest_event_list = Event.objects.order_by('-date')[:3]
     latest_announcement_list = Announcement.objects.order_by('-pub_date')[:3]
@@ -23,6 +27,9 @@ def home(request):
     return render(request, 'home/home.html', context)
 
 def download_BS_CS_Curriculum(request):
+    """Find the file in the given directory, use FileWrapper to split it into smaller increments,
+    make the wrapper into an HTTP response, define response attributes, and return the response.
+    """
     filename = 'media/programs/BS CS Curriculum.pdf'
     wrapper = FileWrapper(open(filename, 'rb'))
     response = HttpResponse(wrapper)

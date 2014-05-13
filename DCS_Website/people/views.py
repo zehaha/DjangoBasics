@@ -3,6 +3,10 @@ from people.models import Faculty, Student, Staff
 
 # Create your views here.
 def pipz(request):
+    """Fetch the requested objects with the given primary keys from the database,
+    create context by assigning the objects to corresponding variables in the template,
+    and render the page using the context and the template in the given directory.
+    """
     faculty_list = Faculty.objects.order_by('-position')
     student_list = Student.objects.order_by('-org_name')
     staff_list = Staff.objects.order_by('-last_name')

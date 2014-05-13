@@ -9,6 +9,7 @@ STATUS_CHOICES = (
 
 # Create your models here.
 class Image(models.Model):
+	"""Model for the image objects."""
 	image = models.ImageField(upload_to='images/')
 	caption = models.TextField()
 	shown_in = models.CharField(max_length=1, choices=STATUS_CHOICES)

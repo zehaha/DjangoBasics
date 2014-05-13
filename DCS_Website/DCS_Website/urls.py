@@ -7,6 +7,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 admin.autodiscover()
 
+"""Use a regular expression to request the object by its primary key and execute
+the corresponding view when the object is found."""
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'DCS_Website.views.home', name='home'),

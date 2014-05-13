@@ -1,6 +1,7 @@
 from django.db import models
 
 class Faculty(models.Model):
+    """Model for the faculty objects."""
     first_name = models.CharField(max_length=200)
     middle_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
@@ -14,6 +15,7 @@ class Faculty(models.Model):
 	    return self.email
 		
 class Student(models.Model):
+    """Model for the student objects."""
 	org_name = models.CharField(max_length=200)
 	description = models.TextField(blank=True, null=True)
 	logo = models.ImageField(upload_to='org_logos/')
@@ -21,6 +23,7 @@ class Student(models.Model):
 	    return self.org_name
 		
 class Staff(models.Model):
+    """Model for the staff objects."""
     first_name = models.CharField(max_length=200)
     middle_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
