@@ -1,0 +1,13 @@
+.researchBox{
+	background-color:#392012;
+	width:60%;
+	height:60%;
+	margin: 0 auto;
+		margin-top: 10px;
+		margin-bottom: 50px;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-bottom: 40px;
+	padding-top: 5px;
+	border-radius: 10px;
+}
