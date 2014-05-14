@@ -1,12 +1,18 @@
 
 body{ 
-			padding: 0 5px;
 			/*font-family: Verdana, sans-serif;*/
 			background-color: #DDD;
 			}
+			li .padding{
+			padding:0;
+		}
 		ul, li, h3, h2, h1, p, #navi, #content,.section{
 
-			padding:5px;
+			padding-bottom:5px;
+
+			padding-right:5px;
+
+			padding-left:5px;
 			/*margin-left: 350px;*/
 			list-style:none;
 			color: white;
@@ -17,7 +23,7 @@ body{
 			background-color:#392012;
 			position:relative;
 			margin-left: 315px;
-			margin-top: 50px;
+			margin-top: 170px;
 			height:440px;
 			float:left;
 			border-radius: 10px;
