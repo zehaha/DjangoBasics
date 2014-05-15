@@ -4,7 +4,7 @@ from images.models import Image
 from django.conf.urls import patterns, url
 
 class ImageModelTest(TestCase):
-
+	"""Test for image models"""
 	def create_image(self,caption='asdasd',shown_in='asdasd'):
 		return Image.objects.create(caption=caption,shown_in=shown_in)
 	def test_image_creation(self):

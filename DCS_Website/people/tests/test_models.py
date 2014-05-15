@@ -4,7 +4,7 @@ from people.models import Faculty, Student, Staff
 from django.conf.urls import patterns, url
 
 class StudentModelTest(TestCase):
-	
+	"""Test for Students section Models"""
 	def create_student(self,org_name='InterSoc',description='asdsqad'):
 		return Student.objects.create(org_name=org_name,description=description)
 	

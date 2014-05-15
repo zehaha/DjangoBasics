@@ -68,4 +68,3 @@ def about(request):
     context = {'gallery_images' : gallery_images,
                 }
     return render(request, 'about/about.html', context)
-

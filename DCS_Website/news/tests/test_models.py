@@ -4,7 +4,7 @@ from news.models import NewsArticle
 from django.conf.urls import patterns, url
 
 class NewsModelTest(TestCase):
-
+	"""Test for News models"""
 	def create_news(self,pub_date='2014-04-30',title='asdasd',body='asdasd'):
 		return NewsArticle.objects.create(pub_date=pub_date,title=title,body=body)
 	def test_news_creation(self):
