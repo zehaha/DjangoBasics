@@ -24,7 +24,6 @@ urlpatterns = patterns('',
     url(r'^programs/MS CS Curriculum/download', 'DCS_Website.views.download_MS_CS_Curriculum'),
     url(r'^programs/PhD CS Curriculum/download', 'DCS_Website.views.download_PhD_CS_Curriculum'),
     url(r'^programs/', 'DCS_Website.views.programs'),
-    url(r'^people/', include('people.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
             'document_root': settings.MEDIA_ROOT,
