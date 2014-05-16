@@ -1,6 +1,249 @@
-<p><a target="_blank" href="/media/programs/BS CS Curriculum.pdf">View BS CS Curriculum</a>
-<a href="BS CS Curriculum/download">Download BS CS Curriculum</a>
-<p><a target="_blank" href="/media/programs/MS CS Curriculum.pdf">View MS CS Curriculum</a>
-<a href="MS CS Curriculum/download">Download MS CS Curriculum</a>
-<p><a target="_blank" href="/media/programs/PhD CS Curriculum.pdf">View PhD CS Curriculum</a>
-<a href="PhD CS Curriculum/download">Download PhD CS Curriculum</a>
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>University of the Philippines Department of Computer Science</title>
+	<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> -->
+	
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="{% static "css/templatemo_style.css" %}" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+	<link href="{% static "css/templatemo_style.css" %}" rel="stylesheet" type="text/css" />
+	<link href="{% static "bootstrap.min.css" %}" rel="stylesheet" type="text/css".>
+
+	<link type="text/css" rel="stylesheet" href="{% static "css/dashboard.css" %}" />
+	<link type="text/css" rel="stylesheet" href="{% static "css/ddsmoothmenu.css" %}" />
+</head>
+
+<body id="programs">
+
+	<div id="templatemo_header_wrapper"> 
+		<!--ito ay ang bar ng nabigasyon-->   
+		<div id="templatemo_menu" class="ddsmoothmenu">
+			<div class="container">
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">About</a></li>
+						   
+
+						<li class=""><a href="#">People</a></li>
+						<li class=""><a href="#">Programs</a></li>
+						<li class=""><a href="#">Research</a></li>
+						<li class=""><a href="#">Affiliates</a></li>
+						<li><a href="#contact">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+			<ul>
+			</ul>
+			<br style="clear: left" />
+		</div> <!-- wakas ng templatemo_menu-->
+		<div class="cleaner"></div>
+	</div>	<!-- wakas ng templatemo_header_wrapper -->
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav navbar-nav navbar-right">
+				<li><a href="#bachelor"><font color="orange">Bachelor of Science in Computer Science</font></a></li>
+				<br>
+				<li><a href="#master"><font color="orange">Master of Science in Computer Science</font></a></li>
+				<br>
+				<li><a href="#doctor"><font color="orange">Doctor of Philosophy in Computer Science</font></a></li>
+				</ul>
+			</div>
+		
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	      		<h1 class="page-header"><a name="bachelor"><font color="maroon">Bachelor of Science in Computer Science</font></a></h1>
+				<h3>Background / Rationale</h3>
+				<p>
+					The BSCS program is designed to equip the student with a knowledge of the fundamental concepts and
+					a reasonable mastery of the basic tools and techniques in the following computing areas:
+				 </p>
+				 <ul>
+
+					<li>Algorithms and data structures</li>
+					<li>Programming languages</li>
+					<li>Computer architecture</li>
+					<li>Numerical and symbolic computation</li>
+					<li>Operating systems</li>
+					<li>Software methodology and engineering</li>
+					<li>Database and information retrieval</li>
+					<li>Artificial intelligence</li>
+				</ul>
+
+				</br>
+				Graduates of the program are prepared to engage in the design and development of the following software systems:
+				</br>
+
+				<ul>
+					<li>Operating systems</li>
+					<li>Intelligent systems</li>
+					<li>Database systems</li>
+					<li>Information systems</li>
+					<li>Application systems</li>
+					<li>Computer networks and distributed systems</li>
+				</ul>
+
+				<p>
+					<a target="_blank" href="/media/programs/BS CS Curriculum.pdf"><button type="button" class="btn btn-primary">View BS CS Curriculum</button></a>
+					<a href="BS CS Curriculum/download"><button type="button" class="btn btn-primary">Download BS CS Curriculum</button></a>
+				</p>
+	        </div>
+			
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	  			<h1 class="page-header"><a name="master"><font color="maroon">Master of Science in Computer Science</font></a></h1>
+				<h3>Background / Rationale</h3>
+				<p>
+					The MSCS program aims to provide both breadth and depth of knowledge in the concepts and techniques
+					related to the theory, design, implementation, and applications of computer systems. Students are required
+					to take courses, which cover advanced topics in theoretical computer science and computer systems. Students 
+					of the MSCS program are expected to write a thesis under the guidance of a faculty adviser. However, a student 
+					may elect to take additional courses in lieu of writing a thesis. Full-time students should be able to complete 
+					the program in two years.
+				</p> 
+				<h3>Admission Requirements</h3>
+				<ol>
+					<li>
+						Applicants must have at least a bachelor’s degree in Computer Science, Engineering, Mathematics or
+						other fields, which provide a substantial background in computing.
+					</li>
+					<li>
+						Applicants must demonstrate proficiency in at least one high-level programming language prescribed
+						by the department’s graduate committee.
+					</li> 
+					<li>
+						Applicants must have a general knowledge of Computer Science. This may include, but is not limited
+						to, the following:
+						<ul>
+							<li>Data Structures</li>
+							<li>Theory of Computation</li>
+							<li>Discrete Mathematical Structures</li>
+							<li>Algorithms</li>
+							<li>Computer Networks</li>
+							<li>Database Systems</li>
+							<li>Software Engineering</li>
+						</ul>
+					</li> 
+					<li>
+						Applicants must get their endorsement by one of the department’s six (6) research laboratories.
+					</li>
+				</ol>
+
+				<p>
+					<a target="_blank" href="/media/programs/MS CS Curriculum.pdf"><button type="button" class="btn btn-primary">View MS CS Curriculum</button></a>
+					<a href="MS CS Curriculum/download"><button type="button" class="btn btn-primary">Download MS CS Curriculum</button></a>
+				</p>
+	        </div>
+			
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<h1 class="page-header"><a name="doctor"><font color="maroon">Doctor of Philosophy in Computer Science</font></a></h1>
+				<h3>Background / Rationale</h3>
+				<p>
+					The program aims to develop computer scientists who are armed with methods, tools and techniques 
+					from both theoretical and systems aspects of computing. They should be able to formulate computing 
+					problems and develop new and innovative technology as novel solutions to address those problems. The 
+					graduates will gain expertise to independently contribute in Research and Development (R&amp;D) on a 
+					specialized area of Computer Science. The program will prepare graduates for professional and/or 
+					research careers in industry, government or academe.
+				</p> 
+				<h3>Admission Requirements</h3> 
+				<ol>
+					<li>
+						Applicants must have a master’s degree in Computer Science, Electrical and Electronics Engineering,
+						Mathematics or other fields, provided they have a substantial background in computing. This must include the following:
+						<ul>
+							<li>Data Structures</li>
+							<li>Automata Theory</li>
+							<li>Discrete Mathematical Structures</li>
+							<li>Algorithms</li>
+							<li>Computer Organization</li>
+							<li>Operating Systems</li>
+							<li>Computer Networks</li>
+							<li>Database Systems</li>
+							<li>Software Engineering</li>
+						</ul>
+					</li> 
+					<li>
+						Applicants must demonstrate proficiency in at least one (1) high-level programming language prescribed by the department’s graduate committee.
+					</li> 
+					<li>
+						Applicants must get their endorsement by one (1) of the department’s six (6) research laboratories:
+						<ul>
+							<li>Algorithms and Complexity Laboratory (ACL)</li>
+							<li>Computer Security Laboratory (CSL)</li>
+							<li>Computer Vision and Machine Intelligence Group (CVMIG)</li>
+							<li>Networks and Distributed Systems Group (NDSG)</li>
+							<li>Scientific Computing Laboratory (SCL)</li>
+							<li>Web Science Laboratory (WSL)</li>
+						</ul>
+					</li>
+				</ol>  
+
+
+				<p>
+					<a target="_blank" href="/media/programs/PhD CS Curriculum.pdf"><button type="button" class="btn btn-primary">View PhD CS Curriculum</button></a>
+					<a href="PhD CS Curriculum/download"><button type="button" class="btn btn-primary">Download PhD CS Curriculum</button></a>
+				</p>
+	        </div>
+	   </div>
+	</div>
+	
+	<div id="templatemo_bottom_wrapper">
+		<div id="templatemo_footer_wrapper1"> <!-- wakas ng templatemo_footer_wrapper -->
+		</div>
+		<!--ito ay ang simula ng paanan-->
+
+		 <div id="templatemo_bottom">
+			<div class="col one_third">
+				<h4><span></span>Navigate</h4>
+			    <div class="bottom_box">
+			        <ul class="footer_list">
+			            <li><a href="">Home</a></li>
+			            <li><a href="">About</a></li>
+			            <li><a href="">People</a></li>
+			            <li><a href="">Programs</a></li>
+			            <li><a href="">Research</a></li>
+			            <li><a href="">Affiliates</a></li>
+			        </ul>  
+				</div>
+			</div>
+			<div class="col one_third">
+				<h4><span></span>Quick Links</h4>
+			    <div class="bottom_box">
+			        <ul class="twitter_post">
+			            <li><a href="http://www.up.edu.ph/">UP System</a></li>
+			            <li><a href="http://upd.edu.ph/">UP Diliman</a></li>
+			            <li><a href="http://coe.upd.edu.ph/">UP College of Engineering</a></li>
+			            <li><a href="https://crs.upd.edu.ph/">UP CRS</a></li>
+			            <li><a href="http://mail.up.edu.ph/">UP Webmail</a></li>
+			        </ul>
+				</div>
+			</div>
+			<div class="col one_third no_margin_right">
+				<h4><span></span>Follow Us</h4>
+			    <div class="bottom_box">
+					<ul class="twitter_post">
+						<li>Velasquez St.<br>University of the Philippines<br>Diliman, Quezon City, Philippines</li>
+						<li>Tel no.: (02)434 3877</li>
+						<li>E-mail address: info@dcs.upd.edu.ph</li>
+			        </ul>
+			    </div>
+			</div>
+
+			<div class="cleaner"></div>
+	    </div> <!-- wakas tempatemo_bottom -->
+	</div> <!-- wakas tempatemo_bottom_wrapper -->
+	<!--dito ay namamalagi sa kopya ng karapatan-->
+	<div id="templatemo_footer_wrapper">
+	    <div id="templatemo_footer">
+	    	Copyright © 2014 Department of Computer Science | Designed by <a href="https://www.facebook.com/nikkodeloyola" target="_parent">Nikko Denson </a> & <a href="https://www.facebook.com/ak.cheng.7" target="_parent">Alan Kyle</a>
+	    </div> <!-- wakas templatemo_footer_wrapper -->
+	</div> 
+</body>
+</html>
