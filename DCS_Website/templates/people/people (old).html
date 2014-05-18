@@ -1,0 +1,262 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>University of the Philippines Department of Computer Science</title>
+	<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> -->
+	
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <link href="{% static "css/templatemo_style.css" %}" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+	<link href="{% static "css/templatemo_style.css" %}" rel="stylesheet" type="text/css" />
+	
+	<link href="{% static "people/css/bootstrap.min.css" %}" rel="stylesheet"/>
+	
+	<link href="{% static "css/dashboard.css" %}" rel="stylesheet" type="text/css"/>
+	<!--- <link href="{% static "css/ddsmoothmenu.css" %}" type="text/css" rel="stylesheet"/> --->
+	
+	<script src="{% static "people/jquery.js" %}"></script>
+	<script src="{% static "people/js/bootstrap.min.js" %}"></script>
+	
+	<style type="text/css">
+	
+    	* { margin: 0; padding: 0; }
+        p:first-child { background: #fffcde; padding: 10px; }
+        li { margin: 0 0 0 20px; }
+
+    </style>
+	
+</head>
+
+<body id="people">
+	<div id="templatemo_header_wrapper"> 
+		<!--ito ay ang bar ng nabigasyon-->   
+			 <div id="templatemo_menu" class="ddsmoothmenu">
+			 
+		<div class="container">
+					<div class="navbar-collapse collapse">
+					 <ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">About</a></li>
+						<li class=""><a href="#">People</a></li>
+						<li class=""><a href="#">Programs</a></li>
+						<li class=""><a href="#">Research</a></li>
+						<li class=""><a href="#">Affiliates</a></li>
+						<li><a href="#contact">Contact Us</a></li>
+					  </ul>
+					</div>
+				</div>
+				<ul>
+				</ul>
+				<br style="clear: left" />
+			</div> <!-- wakas ng templatemo_menu-->
+			<div class="cleaner"></div>
+	</div>	<!-- wakas ng templatemo_header_wrapper -->
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			  <h1 class="page-header"><a name="faculty"><font color="maroon">Faculty</font></a></h1>
+					{% if faculty_list %}
+						<ul><p><font color="black"><b>Assistant Professors</b></font></p>
+							{% for faculty in faculty_assistant_list %}
+								<p><a href="#{{faculty.pk}}" role="button" class="btn" data-toggle="modal">{{faculty.first_name }} {{faculty.last_name }}</a></p>
+								
+								<div class="modal fade" id="{{faculty.pk}}" tabindex="-1" role="dialog" aria-labelledby="{{faculty.pk}}" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h4 class="modal-title">Faculty Profile</h4>
+											</div>
+											<div class="modal-body" align="center">
+												<img src="{{ MEDIA_URL }}{{faculty.photo}}" width="500" height="300">
+												<h3><p><font color="maroon">{{faculty.first_name}} {{faculty.last_name}}</font></p></h3>
+												<h5>{{faculty.position}}</h5> 
+												<h5>{{faculty.email}}</h5>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-primary" data-dismiss="modal">Close Profile</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							{% endfor %}
+							</ul>
+						
+						<ul><p><font color="black"><b>Associate Professors</b></font></p>
+						{% for faculty in faculty_associate_list %}
+							<p><a href="#{{faculty.pk}}" role="button" class="btn" data-toggle="modal">{{faculty.first_name }} {{faculty.last_name }}</a></p>
+							
+							<div class="modal fade" id="{{faculty.pk}}" tabindex="-1" role="dialog" aria-labelledby="{{faculty.pk}}" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h4 class="modal-title">Faculty Profile</h4>
+										</div>
+										<div class="modal-body" align="center">
+											<img src="{{ MEDIA_URL }}{{faculty.photo}}" width="500" height="300">
+											<h3><p><font color="maroon">{{faculty.first_name}} {{faculty.last_name}}</font></p></h3>
+											<h5>{{faculty.position}}</h5> 
+											<h5>{{faculty.email}}</h5>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary" data-dismiss="modal">Close Profile</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+						</ul>
+
+						<ul><p><font color="black"><b>Instructors</b></font></p>
+						{% for faculty in faculty_instructor_list %}
+							<p><a href="#{{faculty.pk}}" role="button" class="btn" data-toggle="modal">{{faculty.first_name }} {{faculty.last_name }}</a></p>
+							
+							<div class="modal fade" id="{{faculty.pk}}" tabindex="-1" role="dialog" aria-labelledby="{{faculty.pk}}" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h4 class="modal-title">Faculty Profile</h4>
+										</div>
+										<div class="modal-body" align="center">
+											<img src="{{ MEDIA_URL }}{{faculty.photo}}" width="500" height="300">
+											<h3><p><font color="maroon">{{faculty.first_name}} {{faculty.last_name}}</font></p></h3>
+											<h5>{{faculty.position}}</h5> 
+											<h5>{{faculty.email}}</h5>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary" data-dismiss="modal">Close Profile</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+						</ul>	
+					{% else %}
+						<p style="text-indent: 3em;">No faculty members are available.</p>
+					{% endif %}
+			</div>
+			
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			  <h1 class="page-header"><a name="staff"><font color="maroon">Staff</font></a></h1>
+				{% if staff_list %}
+					{% for staff in staff_list %}
+						<p><a href="#staff{{staff.pk}}" role="button" class="btn" data-toggle="modal">{{staff.first_name }} {{staff.last_name }}</a></p>
+					
+						<div class="modal fade" id="staff{{staff.pk}}" tabindex="-1" role="dialog" aria-labelledby="{{staff.pk}}" aria-hidden="true">
+							<div class="modal-dialog modal-sm">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										<h4 class="modal-title" id="myModalLabel">Staff Profile</h4>
+									</div>
+									<div class="modal-body">
+										<h3><p align="center"><font color="maroon">{{staff.first_name}} {{staff.last_name}}</font></p></h3>
+										<h5 align="center">Position: {{staff.position}}</h5> 
+										<h5 align="center">Room: {{staff.room}}</h5>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				{% else %}
+					<p>No staff members are available.</p>
+				{% endif %}
+			</div>
+			
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			  <h1 class="page-header"><a name="student"><font color="maroon">Student</font></a></h1>
+				{% if student_list %}
+					{% for student in student_list %}
+						<table class="table table-bordered table-striped">
+							<tbody>
+								<tr>
+									<td><img src="{{ MEDIA_URL }}{{student.logo}}" height="150" width="150"></td>
+									<td><p><b><font color="maroon">{{student.org_name}}</font></b></p><p>{{student.description | linebreaks}}</p></td>
+								</tr>
+							</tbody>
+						</table>
+					{% endfor %}
+				{% else %}
+				   <p>No students are available.</p>
+				{% endif %}
+			</div>
+			
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul>
+					<li class="active"><a href="#faculty"><font color="orange">Faculty</font></a></li>
+					<br>
+					<li><a href="#staff"><font color="orange">Staff</font></a></li>
+					<br>
+					<li><a href="#student"><font color="orange">Student</font></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+
+	<div id="templatemo_bottom_wrapper">
+	 
+		<div id="templatemo_footer_wrapper1"> <!-- wakas ng templatemo_footer_wrapper -->
+		</div>
+		<!--ito ay ang simula ng paanan-->
+
+			<div id="templatemo_bottom">
+				<div class="col one_third">
+					<h4><span></span>Navigate</h4>
+					<div class="bottom_box">
+						<ul class="footer_list">
+							<li><a href="">Home</a></li>
+							<li><a href="">About</a></li>
+							<li><a href="">People</a></li>
+							<li><a href="">Programs</a></li>
+							<li><a href="">Research</a></li>
+							<li><a href="">Affiliates</a></li>
+						</ul>  
+					</div>
+				</div>
+				<div class="col one_third">
+					<h4><span></span>Quick Links</h4>
+					<div class="bottom_box">
+						<ul class="twitter_post">
+							<li><a href="http://www.up.edu.ph/">UP System</a></li>
+							<li><a href="http://upd.edu.ph/">UP Diliman</a></li>
+							<li><a href="http://coe.upd.edu.ph/">UP College of Engineering</a></li>
+							<li><a href="https://crs.upd.edu.ph/">UP CRS</a></li>
+							<li><a href="http://mail.up.edu.ph/">UP Webmail</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col one_third no_margin_right">
+					<h4><span></span>Follow Us</h4>
+					<div class="bottom_box">
+						<ul class="twitter_post">
+							<li>Velasquez St.<br>University of the Philippines<br>Diliman, Quezon City, Philippines</li>
+							<li>Tel no.: (02)434 3877</li>
+							<li>E-mail address: info@dcs.upd.edu.ph</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="cleaner"></div>
+			</div> <!-- wakas tempatemo_bottom -->
+	</div> <!-- wakas tempatemo_bottom_wrapper -->
+	
+	<div id="templatemo_footer_wrapper">
+		<div id="templatemo_footer">
+			Copyright 2014 Department of Computer Science | Designed by <a href="https://www.facebook.com/nikkodeloyola" target="_parent">Nikko Denson </a> & <a href="https://www.facebook.com/ak.cheng.7" target="_parent">Alan Kyle</a>
+		</div> <!-- END of templatemo_footer_wrapper -->
+	</div> <!-- END of templatemo_footer -->
+</body>
+</html>

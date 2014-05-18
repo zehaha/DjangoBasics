@@ -63,6 +63,15 @@ def download_PhD_CS_Curriculum(request):
 def programs(request):
     return render(request, 'programs/programs.html')
 
+def contact(request):
+    return render(request, 'contact/contact.html')
+
+def affiliates(request):
+    return render(request, 'affiliates/affiliates.html')
+
+def research(request):
+    return render(request, 'research/research.html')
+
 def about(request):
     gallery_images = Image.objects.order_by('-id').filter(models.Q(shown_in='g') | models.Q(shown_in='b'))[:6]
     context = {'gallery_images' : gallery_images,

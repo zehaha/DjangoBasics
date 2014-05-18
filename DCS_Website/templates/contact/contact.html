@@ -11,8 +11,9 @@
 		
 		<meta name="viewport" content="width=1024, initial-scale=1, maximum-scale=1">
 		<link rel="stylesheet" href="/static/css/Home_styles.css" />
-		<link rel="stylesheet" href="/static/Home_icarousel.css" />
+		<link rel="stylesheet" href="/static/css/Home_icarousel.css" />
 		<link rel="stylesheet" href="/static/css/Home_demo1.css" />
+		<link rel="stylesheet" href="/static/css/contact_style.css" />
 	</head>
 	
 	<body>
@@ -24,7 +25,7 @@
 					<a id="menu-toggle" class="button dark" href="#"><i class="icon-reorder"></i></a>
 					<nav id="navigation">
 						<ul id="main-menu">
-							<li class="current-menu-item"><a href="/">Home</a></li>
+							<li class="parent"><a href="/">Home</a></li>
 							<li class="parent">
 								<a href="/about">About</a>
 								<ul class="sub-menu">
@@ -74,7 +75,7 @@
 									</li>
 								</ul>
 							</li>
-							<li class="parent"><a href="/contact">Contact Us</a></li>
+							<li class="current-menu-item"><a href="/contact">Contact Us</a></li>
 						</ul>
 					</nav>
 					<div class="clear"></div>
@@ -115,50 +116,85 @@
 					</p>
 				</div>
 				</div>
-		<!--Carousel-->
-		<div class="carousel-container">
-			<div id="icarousel">
-				{% for image in carousel_images %}
-				<div class="slide">
-					<img src="/media/{{ image.image }}" style="width:480px; height:360px;">
+		<!--Contact Content-->
+			<div class = 'contactBox'>
+			<div class = 'row'>
+				<div class = 'col-md-4 content'>
+					<h1>Contact Us</h1><hr>
+					<form class = 'form-horizontal' method = "post" action="http://dcs.upd.edu.ph/index.php/contact/email" role="form">
+						<div class = 'form-group'>
+							<label class = 'col-sm-3 control-label' for = 'Name'>Name</label>
+							<div class = 'col-sm-9'>
+
+							  <input class="form-control" type = 'text' id = 'Name' name = 'name' placeholder='Name' required></input>
+
+							</div>
+						</div>		
+						<div class = 'form-group'>
+							<label class = 'col-sm-3 control-label' for = 'Email'>Email</label>
+							<div class = 'col-sm-9'>
+
+							  <input class="form-control" type = 'email' id = 'Email' name = 'email' placeholder = 'Email' required></input>
+
+							</div>
+						</div>
+						<div class = 'form-group'>
+							<label class = 'col-sm-3 control-label' for = 'Message'>Message</label>
+							<div class = 'col-sm-9'>
+
+							  <textarea class="form-control" rows="5" type = 'text' id = 'msg' name = 'msg'required></textarea>
+
+							</div>
+						</div>
+						<div class = 'form-group'>
+							<div class="col-sm-offset-3 col-sm-9">
+
+								<button type="submit" class="Potato">Submit</button>
+
+							</div>
+						</div>
+					</form>
+					<!--<div class = 'social'>
+						<img src = "http://dcs.upd.edu.ph/img/fb.png"></img>
+						<a href = ''>facebook.com/dcs</a>
+					</div>-->
+					<div class = 'social'>
+
+
+						<img src = "http://dcs.upd.edu.ph/img/google.png"/><a href = 'https://plus.google.com/communities/114982607375965229506'>Visit our google community.</a>
+					</div>
+					<div class = 'social'>
+						<img src = "http://dcs.upd.edu.ph/img/twitter.png"/>
+
+						<a href = 'https://twitter.com/upcs'>Visit out twitter page.</a>
+					</div>
 				</div>
-				{% endfor %}
+				<div class = 'col-md-8'>
+					<img  class="img-responsive" src="http://dcs.upd.edu.ph/img/IMG_0845.png" style="width: 725px; height: 225px">
+					<br /><br />
+					<iframe width="725" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.ph/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=UP+Department++of+Computer+Science&amp;aq=&amp;sll=14.683961,121.062159&amp;sspn=0.201922,0.308647&amp;ie=UTF8&amp;hq=UP+Department++of+Computer+Science&amp;hnear=&amp;t=m&amp;cid=5525695897160382081&amp;ll=14.662398,121.070881&amp;spn=0.029062,0.036478&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+				</div>
 			</div>
 		</div>
 
-		
-		
 
-		<div class='containme'><img src='/static/sample.jpg' style="width:90px;height:80px; border-radius:5px" class="equal"/></div>
-		<div class='containme1'><img src='/static/sample.jpg' style="width:200px;height:175px; border-radius:5px" class="equal1"/></div>
-		<div class='containme2'><img src='/static/sample.jpg' style="width:90px;height:80px; border-radius:5px" class="equal"/></div>
+		<!--Contact Content-->
+		
+		
 	</body>
-
-
-
-
-	
-	<!--Footer-->
 	<footer>
 		<div class='text1'>Copyright &copy; 2014 Department of Computer Science</div>
 		<div class='text2'>Design by <a class='footer' href='www.facebook.com/nikkodeloyola'>Nikko Denson</a> and <a class='footer' href='www.facebook.com/ak.cheng.7'>Alan Cheng</a></div>
 	</footer>
 	
-
 		<script src="/static/js/Home_jquery-1.7.1.min.js"></script>
 		<script src="/static/js/Home_raphael-min.js"></script>
 		<script src="/static/js/Home_jquery.mousewheel.js"></script>
 		<script src="/static/js/Home_jquery.easing.1.3.js"></script>
-        
-
 		<script src="/static/js/Home_icarousel.js"></script>
-		<script>
-			$(window).scroll(function(){
-				window.scrollTo(0,0);
-			});
-var b='$(8).h(2(){$("#4").6({7:5,9:a,b:"c\\d",e:"f",g:"1",i:"j",k:"l",m:3,n:0.5,o:"#p",q:r,s:t})}); | split |Spielen|function||icarousel||iCarousel|slides|document|slidesSpace|200|nextLabel|N|u00e4chste|previousLabel|Vorherige|playLabel|ready|pauseLabel|Pause|timer|360Bar|timerPadding|timerOpacity|timerColor|0F0|timerX|15|timerY|30 replace  \\w+ \\b g'.split(" ");
-eval(function(e,g,a,d,c,f){c=function(a){return a.toString(g)};if(!b[5][b[4]](/^/,String)){for(;a--;)f[c(a)]=d[a]||c(a);d=[function(a){return f[a]}];c=function(){return b[6]};a=1}for(;a--;)d[a]&&(e=e[b[4]](RegExp(b[7]+c(a)+b[7],b[8]),d[a]));return e}(b[0],30,30,b[3][b[2]](b[1]),0,{}));
-		</script>
+
+		
+
 	<!--Footer-->
 	
 </html>

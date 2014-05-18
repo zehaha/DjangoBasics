@@ -17,6 +17,8 @@ They're for the layout team, so that they know how to show the model variables.
 You can now upload images! The image app is in the admin page. Just use the ImageField to upload a file. It will automatically be sent to the media folder, under images. I added some samples to the homepage. Look at the home template to see how to serve images from the media folder.  
 IMPORTANT NOTE: For the image app to work, you need to install a Python program called Pillow, a Python Imaging Library fork. Just open the command prompt and enter "pip install pillow", like what you did with Django.
 
-Integrated layout with back-end! See DCS_Website/views.py and templates/home/home.html to see how to fetch data from the database. Static files like non-user-uploaded images, stylesheets, etc. can be found in images/static because for some reason, the django staticfiles app can't find them if they aren't in another app folder. Might be fixed in a later update.
+Integrated the layout with the back-end! See DCS_Website/views.py and templates/home/home.html to see how to fetch data from the database. Static files like non-user-uploaded images, stylesheets, etc. can be found in images/static because for some reason, the django staticfiles app can't find them if they aren't in another app folder. Might be fixed in a later update.
 
 Curricula may now be downloaded from the programs page. Creating a new app wasn't necessary, but the files DCS_Website.urls and DCS_Website.views look kinda messy now. The pdfs can be found in media/programs.
+
+Integrated the NEW layout with the back-end (ish)! I wasn't sure how to put the news, events, and announcements in the homepage, so I just included the old templates so you guys can see how to fetch things from the database. The carousel and the gallery can display user-uploaded images from the media folder now, though. The people page is still empty! Anyway, good luck, guys. We'll miss you!
