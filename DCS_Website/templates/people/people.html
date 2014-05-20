@@ -4,15 +4,28 @@
 		<title>
 			Department of Computer Science
 		</title>
-		<link rel="stylesheet" type="text/css" href="/static/css/Home_menu.css">
-		<script src="/static/js/Home_jqueryMenu.js"></script>
-		<script src="/static/js/Home_functionMenu.js"></script>
-		<script type='text/javascript' src='j/static/s/Footer_footer.js'></script>
+		
+		<link href="/static/people/css/bootstrap.min.css" rel="stylesheet"/>
+		<script src="/static/people/jquery.js"></script>
+		<script src="/static/people/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" href="/static/css/programs_style.css" />
 		
 		<meta name="viewport" content="width=1024, initial-scale=1, maximum-scale=1">
 		<link rel="stylesheet" href="/static/css/Home_styles.css" />
 		<link rel="stylesheet" href="/static/css/Home_icarousel.css" />
 		<link rel="stylesheet" href="/static/css/Home_demo1.css" />
+		
+		<link rel="stylesheet" type="text/css" href="/static/css/Home_menu.css">
+		<script src="/static/js/Home_jqueryMenu.js"></script>
+		<script src="/static/js/Home_functionMenu.js"></script>
+		<script type="text/javascript" src="j/static/s/Footer_footer.js"></script>
+		
+		<style>
+			h1 { font-family: Helvetica; font-weight: bold; }
+			h3 { font-family: Helvetica; font-size: 13pt; }
+		</style>
+
 	</head>
 	
 	<body>
@@ -47,8 +60,8 @@
 							<li class="parent">
 								<a href="/programs">Programs</a>
 								<ul class="sub-menu">
-									<li><a href="">    Bachelor's Degree</a></li>
-									<li><a href="">    Master's Degree</a></li>
+									<li><a href="">    Bachelors Degree</a></li>
+									<li><a href="">    Masters Degree</a></li>
 									<li><a href="">    Doctorate Degree</a></li>
 									</li>
 								</ul>
@@ -86,7 +99,7 @@
 		<div class="box">
 			<img src='/static/DCS.png' class="left"/>
 			<div class='contain-quick'>
-				<h3 class='meh'>Quick links</h3>
+				<h1 class='meh'><font size="3pt">Quick links</font></h1>
 					<hr>
 					<p class='Quick'>
 						<a href=''>Up System</a>
@@ -98,12 +111,32 @@
 						<a href=''>Up Webmail</a>
 					</br>
 					</p>
-				</div>
 			</div>
+		</div>
+		
+		<div class='box2'>
+			<div class='contain-quick'>
+				<h1 class='meh'><font size="3pt">Navigate</font></h1>
+					<hr>
+					<p class='Quick'>
+						<a href="#faculty" class='people'>Faculty</a>
+					</br>
+					</br>
+						<a href="#staff" class='people'>Staff</a>
+					</br>
+					</br>
+						<a href="#student" class='people'>Student</a>
+					</br>
+
+					</br>
+					</p>
+			</div>
+		</div>
+			
 		<div class="box1">
 			<img src='/static/UP.png' class="right"/>
 			<div class='contain-quick'>
-				<h3 class='meh'>Contact Us</h3>
+				<h1 class='meh'><font size="3pt">Contact Us</font></h1>
 					<hr>
 					<p class='Quick'>
 			Velasquez St.</br>
@@ -115,7 +148,134 @@
 					</p>
 				</div>
 				</div>
-		<!--About Content-->
+				
+		<!--People Content-->
+		<div class = 'programsBox'> 
+					<section id = 'faculty'>
+						<h1>Faculty</h1><hr>
+						<ul><h3>Assistant Professors</h3>
+							{% for faculty in faculty_assistant_list %}
+								<p style="text-indent: 3em;"><a href="#{{faculty.pk}}" data-toggle="modal">{{faculty.first_name }} {{faculty.last_name }}</a></p>
+								
+								<div class="modal fade" id="{{faculty.pk}}" tabindex="-1" role="dialog" aria-labelledby="{{faculty.pk}}" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h4 class="modal-title">Faculty Profile</h4>
+											</div>
+											<div class="modal-body" align="center">
+												<img src="{{ MEDIA_URL }}{{faculty.photo}}" width="100%" alt="">
+												<h3><p><font color="maroon">{{faculty.first_name}} {{faculty.last_name}}</font></p></h3>
+												<h5><font color="gray">{{faculty.position}}</font></h5> 
+												<h5><font color="gray">{{faculty.email}}</font></h5>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-primary" data-dismiss="modal">Close Profile</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							{% endfor %}
+							</ul>
+						
+						<ul><h3>Associate Professors</h3>
+						{% for faculty in faculty_associate_list %}
+							<p style="text-indent: 3em;"><a href="#{{faculty.pk}}" data-toggle="modal">{{faculty.first_name }} {{faculty.last_name }}</a></p>
+							
+							<div class="modal fade" id="{{faculty.pk}}" tabindex="-1" role="dialog" aria-labelledby="{{faculty.pk}}" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h4 class="modal-title">Faculty Profile</h4>
+										</div>
+										<div class="modal-body" align="center">
+											<img src="{{ MEDIA_URL }}{{faculty.photo}}" width="100%" alt="">
+											<h3><p><font color="maroon">{{faculty.first_name}} {{faculty.last_name}}</font></p></h3>
+											<h5><font color="gray">{{faculty.position}}</font></h5> 
+											<h5><font color="gray">{{faculty.email}}</font></h5>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary" data-dismiss="modal">Close Profile</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+						</ul>
+
+						<ul><h3>Instructors</h3>
+						{% for faculty in faculty_instructor_list %}
+							<p style="text-indent: 3em;"><a href="#{{faculty.pk}}" data-toggle="modal">{{faculty.first_name }} {{faculty.last_name }}</a></p>
+							
+							<div class="modal fade" id="{{faculty.pk}}" tabindex="-1" role="dialog" aria-labelledby="{{faculty.pk}}" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h4 class="modal-title">Faculty Profile</h4>
+										</div>
+										<div class="modal-body" align="center">
+											<img src="{{ MEDIA_URL }}{{faculty.photo}}" width="100%" alt="">
+											<h3><p><font color="maroon">{{faculty.first_name}} {{faculty.last_name}}</font></p></h3>
+											<h5><font color="gray">{{faculty.position}}</font></h5> 
+											<h5><font color="gray">{{faculty.email}}</font></h5>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary" data-dismiss="modal">Close Profile</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+						</ul>
+						<hr>
+				</section> 
+				<section id = 'staff'>
+					<h1>Staff</h1><hr>
+					{% for staff in staff_list %}
+						<p style="text-indent: 3em;"><a href="#staff{{staff.pk}}" data-toggle="modal">{{staff.first_name }} {{staff.last_name }}</a></p>
+					
+						<div class="modal fade" id="staff{{staff.pk}}" tabindex="-1" role="dialog" aria-labelledby="{{staff.pk}}" aria-hidden="true">
+							<div class="modal-dialog modal-sm">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										<h4 class="modal-title" id="myModalLabel">Staff Profile</h4>
+									</div>
+									<div class="modal-body">
+										<h3><p align="center"><font color="maroon">{{staff.first_name}} {{staff.last_name}}</font></p></h3>
+										<h5 align="center"><font color="gray">Position: {{staff.position}}</font></h5> 
+										<h5 align="center"><font color="gray">Room: {{staff.room}}</font></h5>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+					<hr>
+				</section> 
+				<section id = 'student'>
+					<h1>Student</h1><hr>
+					{% for student in student_list %}
+						<table class="table table-bordered">
+							<tbody>
+								<tr>
+									<td><img src="{{ MEDIA_URL }}{{student.logo}}" height="150" width="150"></td>
+									<td><h1>{{student.org_name}}</h1><p>{{student.description | linebreaks}}</p></td>
+								</tr>
+							</tbody>
+						</table>
+					{% endfor %}
+				</section> 
+			</div>
+			</div>
+			</div>
+
+		<!--People Content-->
 		
 		
 	</body>
