@@ -25,8 +25,8 @@
         </h1>
         <img id='keyboard_icon' src='keybd_closed.png'>
         <h2 class='stats'>
-            56 statements &nbsp;
-            <span class='run hide_run shortkey_r button_toggle_run'>56 run</span>
+            54 statements &nbsp;
+            <span class='run hide_run shortkey_r button_toggle_run'>54 run</span>
             <span class='mis shortkey_m button_toggle_mis'>0 missing</span>
             <span class='exc shortkey_x button_toggle_exc'>0 excluded</span>
             
@@ -67,7 +67,7 @@
 <p id='n4' class='stm run hide_run'><a href='#n4'>4</a></p>
 <p id='n5' class='stm run hide_run'><a href='#n5'>5</a></p>
 <p id='n6' class='stm run hide_run'><a href='#n6'>6</a></p>
-<p id='n7' class='stm run hide_run'><a href='#n7'>7</a></p>
+<p id='n7' class='pln'><a href='#n7'>7</a></p>
 <p id='n8' class='stm run hide_run'><a href='#n8'>8</a></p>
 <p id='n9' class='stm run hide_run'><a href='#n9'>9</a></p>
 <p id='n10' class='stm run hide_run'><a href='#n10'>10</a></p>
@@ -78,7 +78,7 @@
 <p id='n15' class='pln'><a href='#n15'>15</a></p>
 <p id='n16' class='pln'><a href='#n16'>16</a></p>
 <p id='n17' class='pln'><a href='#n17'>17</a></p>
-<p id='n18' class='stm run hide_run'><a href='#n18'>18</a></p>
+<p id='n18' class='pln'><a href='#n18'>18</a></p>
 <p id='n19' class='stm run hide_run'><a href='#n19'>19</a></p>
 <p id='n20' class='stm run hide_run'><a href='#n20'>20</a></p>
 <p id='n21' class='stm run hide_run'><a href='#n21'>21</a></p>
@@ -149,7 +149,7 @@
 <p id='t4' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>django</span><span class='op'>.</span><span class='nam'>db</span> <span class='key'>import</span> <span class='nam'>models</span><span class='strut'>&nbsp;</span></p>
 <p id='t5' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>django</span><span class='op'>.</span><span class='nam'>views</span><span class='op'>.</span><span class='nam'>static</span> <span class='key'>import</span> <span class='nam'>serve</span><span class='strut'>&nbsp;</span></p>
 <p id='t6' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>django</span><span class='op'>.</span><span class='nam'>core</span><span class='op'>.</span><span class='nam'>servers</span><span class='op'>.</span><span class='nam'>basehttp</span> <span class='key'>import</span> <span class='nam'>FileWrapper</span><span class='strut'>&nbsp;</span></p>
-<p id='t7' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>news</span><span class='op'>.</span><span class='nam'>models</span> <span class='key'>import</span> <span class='nam'>NewsArticle</span><span class='strut'>&nbsp;</span></p>
+<p id='t7' class='pln'><span class='com'>#from news.models import NewsArticle</span><span class='strut'>&nbsp;</span></p>
 <p id='t8' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>events</span><span class='op'>.</span><span class='nam'>models</span> <span class='key'>import</span> <span class='nam'>Event</span><span class='strut'>&nbsp;</span></p>
 <p id='t9' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>announcements</span><span class='op'>.</span><span class='nam'>models</span> <span class='key'>import</span> <span class='nam'>Announcement</span><span class='strut'>&nbsp;</span></p>
 <p id='t10' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>images</span><span class='op'>.</span><span class='nam'>models</span> <span class='key'>import</span> <span class='nam'>Image</span><span class='strut'>&nbsp;</span></p>
@@ -160,11 +160,11 @@
 <p id='t15' class='pln'><span class='str'>&nbsp; &nbsp; creat context by assigning the objects to corresponding variables in the template,</span><span class='strut'>&nbsp;</span></p>
 <p id='t16' class='pln'><span class='str'>&nbsp; &nbsp; and render the page using the context and the template in the given directory.</span><span class='strut'>&nbsp;</span></p>
 <p id='t17' class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
-<p id='t18' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>latest_news_article_list</span> <span class='op'>=</span> <span class='nam'>NewsArticle</span><span class='op'>.</span><span class='nam'>objects</span><span class='op'>.</span><span class='nam'>order_by</span><span class='op'>(</span><span class='str'>&#39;-pub_date&#39;</span><span class='op'>)</span><span class='op'>[</span><span class='op'>:</span><span class='num'>3</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t18' class='pln'>&nbsp; &nbsp; <span class='com'>#latest_news_article_list = NewsArticle.objects.order_by(&#39;-pub_date&#39;)[:3]</span><span class='strut'>&nbsp;</span></p>
 <p id='t19' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>latest_event_list</span> <span class='op'>=</span> <span class='nam'>Event</span><span class='op'>.</span><span class='nam'>objects</span><span class='op'>.</span><span class='nam'>order_by</span><span class='op'>(</span><span class='str'>&#39;-date&#39;</span><span class='op'>)</span><span class='op'>[</span><span class='op'>:</span><span class='num'>3</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
 <p id='t20' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>latest_announcement_list</span> <span class='op'>=</span> <span class='nam'>Announcement</span><span class='op'>.</span><span class='nam'>objects</span><span class='op'>.</span><span class='nam'>order_by</span><span class='op'>(</span><span class='str'>&#39;-pub_date&#39;</span><span class='op'>)</span><span class='op'>[</span><span class='op'>:</span><span class='num'>3</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
 <p id='t21' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>carousel_images</span> <span class='op'>=</span> <span class='nam'>Image</span><span class='op'>.</span><span class='nam'>objects</span><span class='op'>.</span><span class='nam'>order_by</span><span class='op'>(</span><span class='str'>&#39;-id&#39;</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>filter</span><span class='op'>(</span><span class='nam'>models</span><span class='op'>.</span><span class='nam'>Q</span><span class='op'>(</span><span class='nam'>shown_in</span><span class='op'>=</span><span class='str'>&#39;c&#39;</span><span class='op'>)</span> <span class='op'>|</span> <span class='nam'>models</span><span class='op'>.</span><span class='nam'>Q</span><span class='op'>(</span><span class='nam'>shown_in</span><span class='op'>=</span><span class='str'>&#39;b&#39;</span><span class='op'>)</span><span class='op'>)</span><span class='op'>[</span><span class='op'>:</span><span class='num'>6</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
-<p id='t22' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>context</span> <span class='op'>=</span> <span class='op'>{</span><span class='str'>&#39;latest_news_article_list&#39;</span> <span class='op'>:</span> <span class='nam'>latest_news_article_list</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t22' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>context</span> <span class='op'>=</span> <span class='op'>{</span><span class='com'>#&#39;latest_news_article_list&#39; : latest_news_article_list,</span><span class='strut'>&nbsp;</span></p>
 <p id='t23' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;latest_event_list&#39;</span> <span class='op'>:</span> <span class='nam'>latest_event_list</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
 <p id='t24' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;latest_announcement_list&#39;</span> <span class='op'>:</span> <span class='nam'>latest_announcement_list</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
 <p id='t25' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;carousel_images&#39;</span> <span class='op'>:</span> <span class='nam'>carousel_images</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>

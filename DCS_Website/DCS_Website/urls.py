@@ -15,7 +15,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^$', 'DCS_Website.views.home', name='home'),
-    url(r'^news/', include('news.urls')),
+    #url(r'^news/', include('news.urls')),
     url(r'^events/', include('events.urls')),
     url(r'^announcements/', include('announcements.urls')),
     url(r'^about/', 'DCS_Website.views.about'),

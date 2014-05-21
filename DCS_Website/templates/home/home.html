@@ -29,8 +29,8 @@
 								<a href="/about">About</a>
 								<ul class="sub-menu">
 									<li><a href="">    About</a></li>
-									<li><a href="">    Mission</a></li>
 									<li><a href="">    Vision</a></li>
+									<li><a href="">    Mission</a></li>
 									<li><a href="">    Gallery</a></li>
 									</li>
 								</ul>
@@ -81,40 +81,7 @@
 				</div>
 			</header>	
 		</div>    
-		
 
-		<div class="box">
-			<img src='/static/DCS.png' class="left"/>
-			<div class='contain-quick'>
-				<h3 class='meh'>Quick links</h3>
-					<hr>
-					<p class='Quick'>
-						<a href=''>Up System</a>
-					</br>
-						<a href=''>Up Diliman</a>
-					</br>
-						<a href=''>Up College of Engineering</a>
-					</br>
-						<a href=''>Up Webmail</a>
-					</br>
-					</p>
-				</div>
-			</div>
-		<div class="box1">
-			<img src='/static/UP.png' class="right"/>
-			<div class='contain-quick'>
-				<h3 class='meh'>Contact Us</h3>
-					<hr>
-					<p class='Quick'>
-			Velasquez St.</br>
-			University of the Philippines</br>
-			Diliman, Quezon City, Philippines
-			1101</br>
-			(02)434 3877</br>
-			info@dcs.upd.edu.ph</br>
-					</p>
-				</div>
-				</div>
 		<!--Carousel-->
 		<div class="carousel-container">
 			<div id="icarousel">
@@ -126,12 +93,54 @@
 			</div>
 		</div>
 
+		<div class="box-container">
+			<div class="box">
+				<img src='/static/DCS.png' class="left"/>
+				<div class='contain-quick'>
+					<h3 class='meh'>Quick links</h3>
+						<hr>
+						<p class='Quick'>
+							<a href=''>Up System</a>
+						</br>
+							<a href=''>Up Diliman</a>
+						</br>
+							<a href=''>Up College of Engineering</a>
+						</br>
+							<a href=''>Up Webmail</a>
+						</br>
+						</p>
+				</div>
+			</div>
+			<div class="box-right">
+				<img src='/static/UP.png' class="right"/>
+				<div class='contain-quick'>
+					<h3 class='meh'>Contact Us</h3>
+						<hr>
+						<p class='Quick'>
+				Velasquez St.</br>
+				University of the Philippines</br>
+				Diliman, Quezon City, Philippines
+				1101</br>
+				(02)434 3877</br>
+				info@dcs.upd.edu.ph</br>
+						</p>
+				</div>
+			</div>
+		</div>
 		
-		
-
-		<div class='containme'><img src='/static/sample.jpg' style="width:90px;height:80px; border-radius:5px" class="equal"/></div>
-		<div class='containme1'><img src='/static/sample.jpg' style="width:200px;height:175px; border-radius:5px" class="equal1"/></div>
-		<div class='containme2'><img src='/static/sample.jpg' style="width:90px;height:80px; border-radius:5px" class="equal"/></div>
+		<div class="containme-container">
+			<div class='containme'><div style="margin:1%"><h2 style="margin-left:10px">Announcements</h2>
+        {% for announcement in latest_announcement_list %}
+        	<div class="rp_pp">
+	        	<img src='/static/sample.jpg' style="width:90px;height:80px; border-radius:5px"/>
+	        	<div class ="pad">
+	            	<a href="/announcements/{{ announcement.pk }}/">{{ announcement.title }}</a>
+	            	<p>Feb 27, 2048 - 140 comments</p>
+	            </div>
+	            <div class="cleaner"></div>
+        	</div>
+        {% endfor %}</div></div><div class='containme'><img src='/static/sample.jpg' style="width:90px;height:80px; border-radius:5px" class="equal"/></div>
+		</div>
 	</body>
 
 
@@ -153,9 +162,9 @@
 
 		<script src="/static/js/Home_icarousel.js"></script>
 		<script>
-			$(window).scroll(function(){
-				window.scrollTo(0,0);
-			});
+			//$(window).scroll(function(){
+			//	window.scrollTo(0,0);
+			//});
 var b='$(8).h(2(){$("#4").6({7:5,9:a,b:"c\\d",e:"f",g:"1",i:"j",k:"l",m:3,n:0.5,o:"#p",q:r,s:t})}); | split |Spielen|function||icarousel||iCarousel|slides|document|slidesSpace|200|nextLabel|N|u00e4chste|previousLabel|Vorherige|playLabel|ready|pauseLabel|Pause|timer|360Bar|timerPadding|timerOpacity|timerColor|0F0|timerX|15|timerY|30 replace  \\w+ \\b g'.split(" ");
 eval(function(e,g,a,d,c,f){c=function(a){return a.toString(g)};if(!b[5][b[4]](/^/,String)){for(;a--;)f[c(a)]=d[a]||c(a);d=[function(a){return f[a]}];c=function(){return b[6]};a=1}for(;a--;)d[a]&&(e=e[b[4]](RegExp(b[7]+c(a)+b[7],b[8]),d[a]));return e}(b[0],30,30,b[3][b[2]](b[1]),0,{}));
 		</script>
