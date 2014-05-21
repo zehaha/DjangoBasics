@@ -42,7 +42,8 @@ INSTALLED_APPS = (
     'events',
     'news',
     'images',
-    'people'
+    'people',
+    'affiliates'
 )
 
 MIDDLEWARE_CLASSES = (
