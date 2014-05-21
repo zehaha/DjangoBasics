@@ -2,6 +2,8 @@ from django.template.loader import render_to_string
 from django.test import TestCase, Client
 from people.models import Faculty, Student, Staff
 from django.conf.urls import patterns, url
+from django.core.urlresolvers import reverse
+from people.views import *
 
 class StudentModelTest(TestCase):
 	"""Test for Students section Models"""
@@ -12,9 +14,9 @@ class StudentModelTest(TestCase):
 		student = self.create_student()
 		self.assertTrue(isinstance(student,Student))
 		self.assertEqual(student.__str__(),student.org_name)
-	
+
 class FacultyModelTest(TestCase):
-	
+	"""Test for Faculty Models"""
 	def create_faculty(self,first_name='Paul',middle_name='V',last_name='Sacedor',position='Instructor'):
 		return Faculty.objects.create(first_name=first_name,middle_name=middle_name,last_name=last_name,position=position)
 	
@@ -24,7 +26,7 @@ class FacultyModelTest(TestCase):
 		self.assertEqual(faculty.__str__(),(faculty.first_name,faculty.middle_name,faculty.last_name))
 
 class StaffModelTest(TestCase):
-
+	"""Test for Staff Models"""
 	def create_staff(self,first_name='Paul',middle_name='V',last_name='Sacedor',position='Instructor'):
 		return Staff.objects.create(first_name=first_name,middle_name=middle_name,last_name=last_name,position=position)
 
@@ -32,3 +34,10 @@ class StaffModelTest(TestCase):
 		staff = self.create_staff()
 		self.assertTrue(isinstance(staff,Staff))
 		self.assertEqual(staff.__str__(),(staff.first_name,staff.middle_name,staff.last_name))
+
+class PeopleViewTest(TestCase):
+	def setUp(self):
+		self.client_stub = Client()
+	def test_view_people_route(self):
+		response = self.client_stub.get('/people/')
+		self.assertEquals(response.status_code, 200)
