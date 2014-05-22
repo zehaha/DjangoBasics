@@ -2,19 +2,20 @@
 ]q(KKKKKKKK	K
 KKKKKKKKKKKKKKKKKKeU>C:\Users\user\DCS-Website\DCS_Website\events\tests\__init__.pyq]qKaUWC:\Users\user\DCS-Website\DCS_Website\announcements\tests\tests_announcements_models.pyq]q(KKKKKKK	K
 KKKKeU:C:\Users\user\DCS-Website\DCS_Website\DCS_Website\tests.pyq]q(KKKKKKK	K
-KKKKKKKKKKKKKKKKKKKKKK K!K"K#K$eUVC:\Users\user\DCS-Website\DCS_Website\announcements\tests\tests_announcements_views.pyq]q(KKKKKKKK	K
-KKKKKKeU5C:\Users\user\DCS-Website\DCS_Website\events\admin.pyq]q(KKKK
-KKKKeUHC:\Users\user\DCS-Website\DCS_Website\events\tests\tests_events_views.pyq]q(KKKKKKK	K
-KKKKKKKeUEC:\Users\user\DCS-Website\DCS_Website\announcements\tests\__init__.pyq]qKaU5C:\Users\user\DCS-Website\DCS_Website\images\admin.pyq]q(KKKK
-KKKKeU>C:\Users\user\DCS-Website\DCS_Website\people\tests\__init__.pyq]qKaU5C:\Users\user\DCS-Website\DCS_Website\people\admin.pyq]q(KKK	K
-KKKKKKKKKKKKKeU6C:\Users\user\DCS-Website\DCS_Website\images\models.pyq ]q!(KKKKKKKKKKKKeUAC:\Users\user\DCS-Website\DCS_Website\images\tests\test_models.pyq"]q#(KKKKKKKK	K
-KKKeU:C:\Users\user\DCS-Website\DCS_Website\DCS_Website\views.pyq$]q%(KKKKKKKK	K
-KKKKKKKKKKK!K"K#K$K%K&K'K(K+K,K-K.K/K0K1K2K3K5K6K7K8K9K:K;K<K=K?K@KBKCKEKFKHKIKKKLKMKOeU9C:\Users\user\DCS-Website\DCS_Website\DCS_Website\urls.pyq&]q'(KKKKKKK%K'eU<C:\Users\user\DCS-Website\DCS_Website\announcements\views.pyq(]q)(KKKK
-KKeU4C:\Users\user\DCS-Website\DCS_Website\events\urls.pyq*]q+(KKKKeU/C:\Users\user\DCS-Website\DCS_Website\manage.pyq,]q-(KKKKKK
-eU=C:\Users\user\DCS-Website\DCS_Website\DCS_Website\settings.pyq.]q/(K	KKKKKKKK-K6K9K;KAKBKCKDKKKMKOKQKSKYK[K]K_eU>C:\Users\user\DCS-Website\DCS_Website\images\tests\__init__.pyq0]q1KaU<C:\Users\user\DCS-Website\DCS_Website\announcements\admin.pyq2]q3(KKKK
-KKKKeU?C:\Users\user\DCS-Website\DCS_Website\announcements\__init__.pyq4]q5KaU6C:\Users\user\DCS-Website\DCS_Website\events\models.pyq6]q7(KKKKKKK	eUAC:\Users\user\DCS-Website\DCS_Website\people\tests\test_models.pyq8]q9(KKKKKKKK	K
-KKKKKKKKKKKKKKKKKK!K"K#K$K&K'K(K)K*K+eUHC:\Users\user\DCS-Website\DCS_Website\events\tests\tests_event_models.pyq:]q;(KKKKKKK	K
-KKKKeU8C:\Users\user\DCS-Website\DCS_Website\people\__init__.pyq<]q=KaU;C:\Users\user\DCS-Website\DCS_Website\announcements\urls.pyq>]q?(KKKKeU5C:\Users\user\DCS-Website\DCS_Website\people\views.pyq@]qA(KKKK
-KKKKKKKKKKKKeU=C:\Users\user\DCS-Website\DCS_Website\announcements\models.pyqB]qC(KKKKKKK	K
-eU8C:\Users\user\DCS-Website\DCS_Website\images\__init__.pyqD]qEKaU5C:\Users\user\DCS-Website\DCS_Website\events\views.pyqF]qG(KKKK
-KKeU4C:\Users\user\DCS-Website\DCS_Website\people\urls.pyqH]qI(KKKKeuu.
+KKKKKKKKKKKKKKKKKKKKKK K!K"K#K$eU9C:\Users\user\DCS-Website\DCS_Website\affiliates\admin.pyq]q(KKKKKK	KeUVC:\Users\user\DCS-Website\DCS_Website\announcements\tests\tests_announcements_views.pyq]q(KKKKKKKK	K
+KKKKKKeU5C:\Users\user\DCS-Website\DCS_Website\events\admin.pyq]q(KKKK
+KKKKeUHC:\Users\user\DCS-Website\DCS_Website\events\tests\tests_events_views.pyq]q(KKKKKKK	K
+KKKKKKKeUEC:\Users\user\DCS-Website\DCS_Website\announcements\tests\__init__.pyq]qKaU<C:\Users\user\DCS-Website\DCS_Website\affiliates\__init__.pyq]qKaU5C:\Users\user\DCS-Website\DCS_Website\images\admin.pyq]q(KKKK
+KKKKeU>C:\Users\user\DCS-Website\DCS_Website\people\tests\__init__.pyq ]q!KaU5C:\Users\user\DCS-Website\DCS_Website\people\admin.pyq"]q#(KKK	K
+KKKKKKKKKKKKKeU6C:\Users\user\DCS-Website\DCS_Website\images\models.pyq$]q%(KKKKKKKKKKKKeUAC:\Users\user\DCS-Website\DCS_Website\images\tests\test_models.pyq&]q'(KKKKKKKK	K
+KKKeU:C:\Users\user\DCS-Website\DCS_Website\DCS_Website\views.pyq(]q)(KKKKKKKK	K
+KKKKKKKKKKKK"K#K$K%K&K'K(K)K,K-K.K/K0K1K2K3K4K6K7K8K9K:K;K<K=K>K@KAKCKDKFKGKHKJKKKMKNKOKQeU9C:\Users\user\DCS-Website\DCS_Website\DCS_Website\urls.pyq*]q+(KKKKKKK%K'eU<C:\Users\user\DCS-Website\DCS_Website\announcements\views.pyq,]q-(KKKK
+KKeU4C:\Users\user\DCS-Website\DCS_Website\events\urls.pyq.]q/(KKKKeU/C:\Users\user\DCS-Website\DCS_Website\manage.pyq0]q1(KKKKKK
+eU9C:\Users\user\DCS-Website\DCS_Website\affiliates\tests.pyq2]q3KaU=C:\Users\user\DCS-Website\DCS_Website\DCS_Website\settings.pyq4]q5(K	KKKKKKKK.K7K:K<KBKCKDKEKLKNKPKRKTKZK\K^K`eU>C:\Users\user\DCS-Website\DCS_Website\images\tests\__init__.pyq6]q7KaU<C:\Users\user\DCS-Website\DCS_Website\announcements\admin.pyq8]q9(KKKK
+KKKKeU?C:\Users\user\DCS-Website\DCS_Website\announcements\__init__.pyq:]q;KaU6C:\Users\user\DCS-Website\DCS_Website\events\models.pyq<]q=(KKKKKKK	eUAC:\Users\user\DCS-Website\DCS_Website\people\tests\test_models.pyq>]q?(KKKKKKKK	K
+KKKKKKKKKKKKKKKKKK!K"K#K$K&K'K(K)K*K+eUHC:\Users\user\DCS-Website\DCS_Website\events\tests\tests_event_models.pyq@]qA(KKKKKKK	K
+KKKKeU8C:\Users\user\DCS-Website\DCS_Website\people\__init__.pyqB]qCKaU:C:\Users\user\DCS-Website\DCS_Website\affiliates\models.pyqD]qE(KKKKKK	K
+KKKeU;C:\Users\user\DCS-Website\DCS_Website\announcements\urls.pyqF]qG(KKKKeU5C:\Users\user\DCS-Website\DCS_Website\people\views.pyqH]qI(KKKK
+KKKKKKKKKKKKeU=C:\Users\user\DCS-Website\DCS_Website\announcements\models.pyqJ]qK(KKKKKKK	K
+eU8C:\Users\user\DCS-Website\DCS_Website\images\__init__.pyqL]qMKaU5C:\Users\user\DCS-Website\DCS_Website\events\views.pyqN]qO(KKKK
+KKeU4C:\Users\user\DCS-Website\DCS_Website\people\urls.pyqP]qQ(KKKKeuu.

@@ -26,7 +26,7 @@ urlpatterns = patterns('',
     url(r'^contact/', 'DCS_Website.views.contact'),
     url(r'^programs/', 'DCS_Website.views.programs'),
     url(r'^affiliates/', 'DCS_Website.views.affiliates'),
-    url(r'^research/', 'DCS_Website.views.research'),
+    url(r'^research/', include('research.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
             'document_root': settings.MEDIA_ROOT,

@@ -84,67 +84,106 @@
 		</div>    
 		
 
-		<div class="box">
-			<img src='/static/DCS.png' class="left"/>
-			<div class='contain-quick'>
-				<h3 class='meh'>Quick links</h3>
-					<hr>
-					<p class='Quick'>
-						<a href=''>Up System</a>
-					</br>
-						<a href=''>Up Diliman</a>
-					</br>
-						<a href=''>Up College of Engineering</a>
-					</br>
-						<a href=''>Up Webmail</a>
-					</br>
-					</p>
+		<div class="boxContainerAbout">
+			<div class="boxLeftAbout">
+				<img src='/static/DCS.png' class="left"/>
+				<div class='contain-quick'>
+					<h3 class='meh'>Quick links</h3>
+						<hr>
+						<p class='Quick'>
+							<a href="http://www.up.edu.ph/">UP System</a>
+						</br>
+							<a href="http://upd.edu.ph/">UP Diliman</a>
+						</br>
+							<a href="http://coe.upd.edu.ph/">UP College of Engineering</a>
+						</br>
+							<a href="https://crs.upd.edu.ph/">UP CRS</a>
+						</br>
+							<a href="http://mail.up.edu.ph/">UP Webmail</a>
+						</br>
+						</p>
 				</div>
 			</div>
-		<div class="box1">
-			<img src='/static/UP.png' class="right"/>
-			<div class='contain-quick'>
-				<h3 class='meh'>Contact Us</h3>
-					<hr>
-					<p class='Quick'>
-			Velasquez St.</br>
-			University of the Philippines</br>
-			Diliman, Quezon City, Philippines
-			1101</br>
-			(02)434 3877</br>
-			info@dcs.upd.edu.ph</br>
-					</p>
+			<div class="boxRightBox">
+				<img src='/static/UP.png' class="right"/>
+				<div class='contain-quick'>
+					<h3 class='meh'>Contact Us</h3>
+						<hr>
+						<p class='Quick'>
+				Velasquez St.</br>
+				University of the Philippines</br>
+				Diliman, Quezon City, Philippines
+				1101</br>
+				(02)434 3877</br>
+				info@dcs.upd.edu.ph</br>
+						</p>
 				</div>
-				</div>
-					<div class='box2'>
+			</div>
+		</div>
+<div class="boxContainerAbout">
+		<div class='ResearchNavBarBoxLeft'>
 			<div class='contain-quick'>
 				<h3 class='meh'>Navigate</h3>
 					<hr>
 					<p class='Quick'>
-						<a href='' class='program'>Algorithms and Complexity Laboratory</a><br><br>
-
-						<a href='' class='program'>Computer Security Group</a><br><br>
-						<a href='' class='program'>Computer Vision and Machine Intelligence Group</a><br><br>
-						<a href='' class='program'>Web Science Group</a><br><br>
- 
+						<a href='' class='program'>Algorithms and Complexity Laboratory</a>
+						<br>
+						<br>
+						<a href='' class='program'>Computer Security Group</a>
+						<br>
+						<br>
+						<a href='' class='program'>Computer Vision and Machine Intelligence Group</a>
+						<br>
+						<br>
+						<a href='' class='program'>Web Science Group</a>
+						<br>
+						<br>
 					</p>
-				</div>
 			</div>
-				<div class='box3'>
+		</div>
+
+		<div class='ResearchNavBarBoxRight'>
 			<div class='contain-quick'>
 				<h3 class='meh'>Navigate</h3>
 					<hr>
 					<p class='Quick'>
-						<a href='' class='program'>Networks and Distributed Systems Group</a><br><br>
-
-						<a href='' class='program'>Service Science and Software Engineering Laboratory</a><br><br>
-						<a href='' class='program'>Scientific Computing Laboratory</a><br><br>
-
- 
+					<a href='' class='program'>Networks and Distributed Systems Group</a>
+					<br>
+					<br>
+					<a href='' class='program'>Service Science and Software Engineering Laboratory</a>
+					<br>
+					<br>
+					<a href='' class='program'>Scientific Computing Laboratory</a>
+					<br>
+					<br>
 					</p>
-				</div>
 			</div>
-		<!--Research-->
+		</div>
+</div>
+		<div class = 'researchBox' id = 'labdesc'> 
+					{% for lab in lab_list %}
+						<br>
+						<h1>{{lab.name}}({{lab.abbr}})</h1>
+						<hr>
+						<p> {{lab.description}}</p>
+						<h3>Research Fields</h3>
+						<ul>
+							{% for field in  lab.field_set.all%}	
+								<li>{{field.field_name}}</li>
+							{% endfor %}
+						</ul>
+						<h3>Laboratory Head</h3> 
+						<span>{{lab.head}}<span>
+						<h3>Advisers</h3>
+						<ul>
+							{% for adviser in  lab.adviser_set.all%}	
+								<li>{{adviser.adviser_name}}</li>
+							{% endfor %}
+						</ul>
+						<br>
+					{% endfor %}
+		</div>
+		<!--Research
 		<div class = 'researchBox' id = 'labdesc'> 
 					<section id = 'acl'>
 						<h1>Algorithms and Complexity Laboratory</h1> 

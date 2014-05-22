@@ -152,3 +152,49 @@ body{
 			top:28px;
 			color:#933;
 		}
+
+		.boxLeftAbout, .boxRightBox {
+			float: left;
+			height:375px;
+			z-index: 1000;
+			width:185px;
+			margin: 1%;
+			background-color:#392012;
+			border-radius: 10px;
+			opacity:0.6;
+			
+		}
+
+		.boxRightBox {
+			float:right;
+		}
+
+		.boxContainer{
+			position: absolute;
+		}
+/*.box-container {
+	width:100%;
+	margin-top: -440px;
+}
+
+.box, .box-right {
+	float: left;
+	height:375px;
+	z-index: 1000;
+	width:185px;
+	margin: 1%;
+	background-color:#392012;
+	border-radius: 10px;
+	opacity:0.6;
+
+}
+
+.box-right {
+	float:right;
+}
+
+.Quick{
+	margin-left:25px;
+	font-size: 12px;
+	font-family: Helvetica;
+}*/

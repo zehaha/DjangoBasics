@@ -100,13 +100,15 @@
 					<h3 class='meh'>Quick links</h3>
 						<hr>
 						<p class='Quick'>
-							<a href=''>Up System</a>
+							<a href="http://www.up.edu.ph/">UP System</a>
 						</br>
-							<a href=''>Up Diliman</a>
+							<a href="http://upd.edu.ph/">UP Diliman</a>
 						</br>
-							<a href=''>Up College of Engineering</a>
+							<a href="http://coe.upd.edu.ph/">UP College of Engineering</a>
 						</br>
-							<a href=''>Up Webmail</a>
+							<a href="https://crs.upd.edu.ph/">UP CRS</a>
+						</br>
+							<a href="http://mail.up.edu.ph/">UP Webmail</a>
 						</br>
 						</p>
 				</div>
@@ -127,20 +129,34 @@
 				</div>
 			</div>
 		</div>
+
 		
 		<div class="containme-container">
-			<div class='containme'><div style="margin:1%"><h2 style="margin-left:10px">Announcements</h2>
-        {% for announcement in latest_announcement_list %}
-        	<div class="rp_pp">
-	        	<img src='/static/sample.jpg' style="width:90px;height:80px; border-radius:5px"/>
-	        	<div class ="pad">
-	            	<a href="/announcements/{{ announcement.pk }}/">{{ announcement.title }}</a>
-	            	<p>Feb 27, 2048 - 140 comments</p>
-	            </div>
-	            <div class="cleaner"></div>
-        	</div>
-        {% endfor %}</div></div><div class='containme'><img src='/static/sample.jpg' style="width:90px;height:80px; border-radius:5px" class="equal"/></div>
-		</div>
+			<div class='containme'><h2 style="margin-left:20px">Announcements</h2>
+    			{% for announcement in latest_announcement_list %}
+    				<div class="rp_pp">
+        				<img src='/static/sample.jpg' style="width:90px;height:80px; border-radius:5px"/>
+        				<div class ="pad">
+            				<a href="/announcements/{{ announcement.pk }}/">{{ announcement.title }}</a>
+            				<p>Feb 27, 2048 - 140 comments</p>
+            			</div>
+            			<div class="cleaner"></div>
+    				</div>
+    			{% endfor %}
+    		</div><div class='containme'><h2 style="margin-left:20px">Events</h2>
+    			{% for event in latest_event_list %}
+    				<div class="rp_pp">
+        				<img src='/static/sample.jpg' style="width:90px;height:80px; border-radius:5px"/>
+        				<div class ="pad2">
+            				<p>{{event.description}}</p>
+            				<p>Feb 27, 2048 - 140 comments</p>
+            			</div>
+            			<div class="cleaner"></div>
+    				</div>
+    			{% endfor %}
+    		</div>
+        </div>
+
 	</body>
 
 

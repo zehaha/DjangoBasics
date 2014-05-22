@@ -8,6 +8,7 @@ from django.core.servers.basehttp import FileWrapper
 from events.models import Event
 from announcements.models import Announcement
 from images.models import Image
+from affiliates.models import Affiliate
 
 # Create your views here.
 def home(request):
@@ -20,10 +21,10 @@ def home(request):
     latest_announcement_list = Announcement.objects.order_by('-pub_date')[:3]
     carousel_images = Image.objects.order_by('-id').filter(models.Q(shown_in='c') | models.Q(shown_in='b'))[:6]
     context = {#'latest_news_article_list' : latest_news_article_list,
-    			'latest_event_list' : latest_event_list,
-    			'latest_announcement_list' : latest_announcement_list,
-    			'carousel_images' : carousel_images,
-    			}
+                'latest_event_list' : latest_event_list,
+                'latest_announcement_list' : latest_announcement_list,
+                'carousel_images' : carousel_images,
+                }
     return render(request, 'home/home.html', context)
 
 def download_BS_CS_Curriculum(request):
@@ -67,10 +68,9 @@ def contact(request):
     return render(request, 'contact/contact.html')
 
 def affiliates(request):
-    return render(request, 'affiliates/affiliates.html')
+    affiliate_list = Affiliate.objects.all()
+    return render(request, 'affiliates/affiliates.html', {'affiliate_list': affiliate_list,})
 
-def research(request):
-    return render(request, 'research/research.html')
 
 def about(request):
     gallery_images = Image.objects.order_by('-id').filter(models.Q(shown_in='g') | models.Q(shown_in='b'))[:6]

@@ -84,236 +84,90 @@
 		</div>    
 
 
-		<div class="box">
-			<img src='/static/DCS.png' class="left"/>
-			<div class='contain-quick'>
-				<h3 class='meh'>Quick links</h3>
-					<hr>
-					<p class='Quick'>
-						<a href=''>Up System</a>
-					</br>
-						<a href=''>Up Diliman</a>
-					</br>
-						<a href=''>Up College of Engineering</a>
-					</br>
-						<a href=''>Up Webmail</a>
-					</br>
-					</p>
+		<div class="boxContainerAbout">
+			<div class="boxLeftAbout">
+				<img src='/static/DCS.png' class="left"/>
+				<div class='contain-quick'>
+					<h3 class='meh'>Quick links</h3>
+						<hr>
+						<p class='Quick'>
+							<a href="http://www.up.edu.ph/">UP System</a>
+						</br>
+							<a href="http://upd.edu.ph/">UP Diliman</a>
+						</br>
+							<a href="http://coe.upd.edu.ph/">UP College of Engineering</a>
+						</br>
+							<a href="https://crs.upd.edu.ph/">UP CRS</a>
+						</br>
+							<a href="http://mail.up.edu.ph/">UP Webmail</a>
+						</br>
+						</p>
 				</div>
 			</div>
-		<div class="box1">
-			<img src='/static/UP.png' class="right"/>
+			<div class="boxRightBox">
+				<img src='/static/UP.png' class="right"/>
+				<div class='contain-quick'>
+					<h3 class='meh'>Contact Us</h3>
+						<hr>
+						<p class='Quick'>
+				Velasquez St.</br>
+				University of the Philippines</br>
+				Diliman, Quezon City, Philippines
+				1101</br>
+				(02)434 3877</br>
+				info@dcs.upd.edu.ph</br>
+						</p>
+				</div>
+			</div>
+		</div>
+		<div class='box2'>
 			<div class='contain-quick'>
-				<h3 class='meh'>Contact Us</h3>
+				<h1 class='meh'><font size="3pt">Navigate</font></h1>
 					<hr>
 					<p class='Quick'>
-			Velasquez St.</br>
-			University of the Philippines</br>
-			Diliman, Quezon City, Philippines
-			1101</br>
-			(02)434 3877</br>
-			info@dcs.upd.edu.ph</br>
+						<a href="#corp" class='about'>Corporate Donors</a>
+					</br>
+					</br>
+						<a href="#iglap" class='about'>Iglap Partners</a>
+					</br>
+					</br>
 					</p>
-				</div>
-				</div>
+			</div>
+		</div>
 		<!--Affiliates Content-->
 		<div class = 'affiliatesBox'>
 					<section id = 'corp'>
 						<h1>Corporate Donors</h1><hr>
-						<h3>Accenture</h3>
-						<div class="corp"><a href="http://www.accenture.com"><img class = 'img-thumbnail corp pull-right' src = "http://dcs.upd.edu.ph/img/accenture.jpg"></img></a></div>
-						<p>Accenture is a global management consulting, technology services and outsourcing company serving clients in more than 120 countries. Combining unparalleled experience, comprehensive capabilities across all industries and business functions, and extensive research on the world's most successful companies, Accenture collaborates with clients to help them become high-performance businesses and governments.</p>
-						<p>Accenture has extensive relationships with the world's leading companies including 92 of the Fortune Global 100 and more than three quarters of the Fortune Global 500. Accenture prides itself on its 'high performance business' strategy building on their expertise in consulting, technology and outsourcing to help clients perform at the highest levels. </p>
-						<h3>IBM</h3>
-						<div class="corp"><a href="http://www.ibm.com"><img class = 'img-thumbnail pull-right' src = "http://dcs.upd.edu.ph/img/ibm.jpg"></img></a></div>
-						<p>International Business Machines Corporation, or IBM, is an American multinational technology and consulting corporation, with headquarters in Armonk, New York, United States. IBM manufactures and markets computer hardware and software, and offers infrastructure, hosting and consulting services in areas ranging from mainframe computers to nanotechnology.</p>
-						<p>International Business Machines Corporation, or IBM,is an American multinational technology and consulting corporation, with headquarters in Armonk, New York/ United States. IBM manufactures and markets computer hardware and software, and offers infrastructure, hosting and consulting services in areas ranging from mainframe computers to nanotechnology.</p>
+						{% if affiliate_list %}
+							{% for corporatedonor in affiliate_list %}
+								{% if corporatedonor.corporate_donor %}
+									<h3>{{ corporatedonor.name }}</h3>
+									<div class="corp"><a href={{ corporatedonor.link }}><img class = 'img-thumbnail corp pull-right' src = "/media/{{ corporatedonor.logo }}"></img></a></div>
+									<p>{{corporatedonor.description}}</p>
+									<p>{{corporatedonor.contribution}}</p>
+								{% endif %}
+							{% endfor %}
+						{% else %}
+							<p>No corporate donors are available.</p>
+						{% endif %}
 					</section>
+					</br>
 					<section id = 'iglap'>
 						<h1>IGLAP Partners</h1><hr>
-						
+						</br>
 						<div class = 'row iglaprow'>
-																								
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.8layertech.com" target="_blank" title = "8 Layer Technologies"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/8Layer-Technologies-Inc-logo.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.accenture.com/ph-en" target="_blank" title = "Accenture"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/Accenture_Logo.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.analog.com" target="_blank" title = "Analog Devices"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/Analog_devices_logo.png"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.appsource.biz" target="_blank" title = "App Source"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/appsource.png"></img></a>
-									</div>
-																		
-									
-																	
-																													</div>
-										<div class = 'row iglaprow'>
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.azeus.com" target="_blank" title = "Azeus"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/Azeus_logo.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.blastasia.com" target="_blank" title = "Blast Asia"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/blast asia.png"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.cascadeo.com" target="_blank" title = "Cascadeo"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/cascadeo.png"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.chikka.com" target="_blank" title = "Chikka"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/chikka.png"></img></a>
-									</div>
-																		
-									
-																	
-																													</div>
-										<div class = 'row iglaprow'>
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.emersonprocess.com" target="_blank" title = "Emerson Process Management"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/epm_WebSafe.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.factset.com" target="_blank" title = "FactSet"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/FactSet.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.gxs.com" target="_blank" title = "Global Exchange Services"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/GXS Philippines.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.hp.com" target="_blank" title = "HP"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/HP.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																													</div>
-										<div class = 'row iglaprow'>
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.icannhas.com" target="_blank" title = "Icannhas"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/incanhass.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.indigo-entertainment.com" target="_blank" title = "Indigo Entertainment"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/indigo.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.indracompany.com" target="_blank" title = "Indra"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/Indra_01_pos_RGB.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.innovascend.com" target="_blank" title = "Innovascend"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/innovascend.png"></img></a>
-									</div>
-																		
-									
-																	
-																													</div>
-										<div class = 'row iglaprow'>
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.microsoft.com" target="_blank" title = "Microsoft"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/Microsoft.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.mitsubishi-motors.com" target="_blank" title = "Mitsubishi"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/mitsubishi_logo.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.mobilemindsinc.com" target="_blank" title = "Mobile Minds"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/mobile minds.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.orangeandbronze.com" target="_blank" title = "Orange & Bronze"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/O&B-logo.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																													</div>
-										<div class = 'row iglaprow'>
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.petron.com" target="_blank" title = "Petron"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/Petron.png"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.pldt.com.ph" target="_blank" title = "PLDT"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/pldt-logo1.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.rarejob.com/professional/" target="_blank" title = "Rarejob"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/rarejob.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.smart.com.ph" target="_blank" title = "Smart Communications"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/smart.png"></img></a>
-									</div>
-																		
-									
-																	
-																													</div>
-										<div class = 'row iglaprow'>
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://ph.sykes.com" target="_blank" title = "Sykes"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/sykes.jpg"></img></a>
-									</div>
-																		
-									
-																	
-																		<div class = 'col-md-3 iglap'>
-										<a href = "http://www.toyota.com.ph" target="_blank" title = "Toyota"><img class="img-thumbnail" src = "http://dcs.upd.edu.ph/files/logos/toyota.jpg"></img></a>
-									</div>
-																		
-									
-														</div>
+							{% if affiliate_list %}
+								{% for affiliate in affiliate_list %}
+									{% if not affiliate.corporate_donor %}
+										<div class = 'col-md-3 iglap'>
+											<a href = {{ affiliate.link }} target="_blank" title = {{ affiliate.name }}><img class="img-thumbnail" src = "/media/{{ affiliate.logo }}"></img></a>
+										</div>
+									{% endif %}
+								{% endfor %}
+							{% else %}
+								<p>No affiliates are available.</p>
+							{% endif %}														
+						</div>
 						
 					</section>
 				</div>

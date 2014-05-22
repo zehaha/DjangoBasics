@@ -11,7 +11,7 @@ class Faculty(models.Model):
     consultation = models.CharField(max_length=200, blank=True, null=True)
     research = models.CharField(max_length=225, blank=True, null=True)
     def __str__(self):
-	    return self.first_name,self.middle_name,self.last_name
+	    return ("%s, %s %s"%(self.last_name,self.first_name,self.middle_name))
 		
 class Student(models.Model):
 	org_name = models.CharField(max_length=200)
@@ -27,4 +27,4 @@ class Staff(models.Model):
     position = models.CharField(max_length=100)
     room = models.CharField(max_length=100)
     def __str__(self):
-	    return self.first_name,self.middle_name,self.last_name
+	    return ("%s, %s %s"%(self.last_name,self.first_name,self.middle_name))
