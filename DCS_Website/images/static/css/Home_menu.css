@@ -72,6 +72,14 @@ footer{
 	float:right;
 }
 
+.box:hover{
+	opacity:1;
+}
+
+.box-right:hover{
+	opacity:1;
+}
+
 hr{
 	width:90%;
 }
@@ -118,10 +126,11 @@ margin-bottom:0;
 			opacity:0.6;
 
 }
+
 .box2{
 	margin-left:13px;
 	height:245px;
-	z-index: 1002;
+	/*z-index: 1002;*/
 	width:185px;
 	background-color:#392012;
 	margin-top:400px;
@@ -130,6 +139,7 @@ margin-bottom:0;
 	opacity:0.6;
 
 }
+
 .box3{
 	list-style: inline;
 	/*margin-left:1145px;*/
@@ -142,6 +152,9 @@ margin-bottom:0;
 	border-radius: 10px;
 	opacity:0.6;
 
+}
+.box3:hover{
+	opacity:1;
 }
 .box4{
 	margin-left:425px;
@@ -198,6 +211,7 @@ opacity:1;
 	width:890px;
 	background-color:#392012;
 }
+
 .containme-container {
 	width: 100%;
 	clear: both;
@@ -485,6 +499,10 @@ ul.sub-menu > li > a.parent {
 	border-radius: 10px;
 }
 
+.aboutBox:hover{
+	opacity:1;
+}
+
 .boxLeftAbout{
 	float:left;
 	height:375px;
@@ -496,6 +514,10 @@ ul.sub-menu > li > a.parent {
 	opacity:0.6;
 	position:relative;
 	
+}
+
+.boxLeftAbout:hover{
+	opacity:1;
 }
 
 .boxRightBox {
@@ -511,16 +533,25 @@ ul.sub-menu > li > a.parent {
 	
 }
 
+.boxRightBox:hover{
+	opacity:1;
+}
+
 .boxContainerAbout{
 	position:fixed;
 	width:100%;
 }
 
+.boxContainerAbout:hover{
+	opacity:1;
+}
+
+
 .ResearchNavBarBoxLeft{
 	float:left;
 	margin-left:13px;
 	height:245px;
-	z-index: 1002;
+	z-index: 0;
 	width:185px;
 	background-color:#392012;
 	margin-top:400px;
@@ -529,15 +560,73 @@ ul.sub-menu > li > a.parent {
 	opacity:0.6;
 
 }
+
+.ResearchNavBarBoxLeft:hover{
+	opacity:1;
+}
+
 .ResearchNavBarBoxRight{
 	float:right;
 	/*margin-left:1145px;*/
 	margin: 1%;
 	height:245px;
-	z-index: 1002;
+	z-index: 0;
 	width:185px;
 	background-color:#392012;
 	margin-top:400px;
 	position: relative;
 	border-radius: 10px;
 	opacity:0.6;
+}
+
+.ResearchNavBarBoxRight:hover{
+	opacity:1;
+}
+
+
+.PeopleNavBar{
+	margin-left:13px;
+	height:245px;
+	z-index: 1002;
+	width:185px;
+	background-color:#392012;
+	margin-top:410px;
+	position: fixed;
+	border-radius: 10px;
+	opacity:0.6;
+}
+.PeopleNavBar:hover{
+	opacity:1;
+}
+
+.PeopleLeftBox{
+	height:375px;
+	z-index: 1000;
+	width:185px;
+	background-color:#392012;
+	margin-left:13px;
+	margin-top:10px;
+	position: fixed;
+	border-radius: 10px;
+	opacity:0.6;
+}
+
+.PeopleLeftBox:hover{
+	opacity:1;
+}
+
+.PeopleRightBox{
+	height:375px;
+	z-index: 1002;
+	width:185px;
+	background-color:#392012;
+	margin-left:1180px;
+	margin-top:10px;
+	position: fixed;
+	border-radius: 10px;
+	opacity:0.6;
+}
+
+.PeopleRightBox:hover{
+	opacity:1;
+}

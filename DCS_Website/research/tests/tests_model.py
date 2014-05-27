@@ -13,3 +13,17 @@ class LabModelTest(TestCase):
 		lab = self.create_lab()
 		self.assertTrue(isinstance(lab,Lab))
 		self.assertEqual(lab.__str__(),lab.name)
+
+# class FeildModelTest(TestCase):
+# 	"""Test for Field section Models"""
+# 	def create_lab(self,name='QWQQWWW',abbr='qwewqeqwe'):
+# 		return Lab.objects.create(name=name,abbr=abbr)
+
+# 	def create_field(self,lab_name='lab',field_name='field'):
+# 		lab2 = self.create_lab('nye', 'nye')
+# 		return Field.objects.create(lab2)
+	
+# 	def test_field_creation(self):
+# 		field = self.create_field()
+# 		self.assertTrue(isinstance(field,Field))
+# 		self.assertEqual(field.__str__(),field.field_name)

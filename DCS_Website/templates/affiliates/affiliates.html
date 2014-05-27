@@ -134,11 +134,11 @@
 					</p>
 			</div>
 		</div>
-		<!--Affiliates Content-->
+
+		<!-- start of Affiliates content -->
 		<div class = 'affiliatesBox'>
 					<section id = 'corp'>
 						<h1>Corporate Donors</h1><hr>
-						{% if affiliate_list %}
 							{% for corporatedonor in affiliate_list %}
 								{% if corporatedonor.corporate_donor %}
 									<h3>{{ corporatedonor.name }}</h3>
@@ -147,35 +147,25 @@
 									<p>{{corporatedonor.contribution}}</p>
 								{% endif %}
 							{% endfor %}
-						{% else %}
-							<p>No corporate donors are available.</p>
-						{% endif %}
 					</section>
 					</br>
 					<section id = 'iglap'>
 						<h1>IGLAP Partners</h1><hr>
 						</br>
 						<div class = 'row iglaprow'>
-							{% if affiliate_list %}
 								{% for affiliate in affiliate_list %}
 									{% if not affiliate.corporate_donor %}
 										<div class = 'col-md-3 iglap'>
 											<a href = {{ affiliate.link }} target="_blank" title = {{ affiliate.name }}><img class="img-thumbnail" src = "/media/{{ affiliate.logo }}"></img></a>
 										</div>
 									{% endif %}
-								{% endfor %}
-							{% else %}
-								<p>No affiliates are available.</p>
-							{% endif %}														
+								{% endfor %}														
 						</div>
-						
 					</section>
 				</div>
 			</div>
 		</div>
-
-		<!--Affiliates Content-->
-		
+		<!-- end of Affiliates content -->
 		
 	</body>
 	<footer>

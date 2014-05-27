@@ -1,140 +1,168 @@
-
-{% load staticfiles %}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Department of Computer Science University of the Philippines Diliman</title>
-<meta name="keywords" content="carousel theme, free templates, image carousel, darkgray, pixelated background, templatemo, CSS, HTML" />
-<meta name="description" content="Carousel Theme with darkgray background - free CSS template provided by templatemo.com" />
-<link href="{% static "css/templatemo_style.css" %}" rel="stylesheet" type="text/css" />
-<link href="{% static "bootstrap.min.css" %}" rel="stylesheet" type="text/css".>
-
-<script type="text/javascript" src="{% static "js/jquery-1-4-2.min.js" %}"></script> 
-<!--script type="text/javascript" src="{% static "/jqueryui/js/jquery-ui-1.7.2.custom.min.js" %}"></script--> 
-<script type="text/javascript" src="{% static "js/jquery-ui.min.js" %}"></script> 
-<script type="text/javascript" src="{% static "js/showhide.js" %}"></script> 
-<script type="text/JavaScript" src="{% static "js/jquery.mousewheel.js" %}"></script> 
-
-<link rel="stylesheet" type="text/css" href="{% static "css/ddsmoothmenu.css" %}"/>
-
-<script type="text/javascript" src="{% static "js/jquery.min.js" %}"></script>
-<script type="text/javascript" src="{% static "js/ddsmoothmenu.js" %}">
-
-/***********************************************
-* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
-* This notice MUST stay intact for legal use
-* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
-***********************************************/
-
-</script>
-
-<script type="text/javascript">
-
-ddsmoothmenu.init({
-	mainmenuid: "templatemo_menu", //menu DIV id
-	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
-	classname: 'ddsmoothmenu', //class added to menu's outer DIV
-	//customtheme: ["#1c5a80", "#18374a"],
-	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
-})
-
-</script> 
-<img src="{% static "images/DCS_logo.png" %}" class='image'>
- 
-</head>
-
-<body id="home">
-
-
-
-<div id="templatemo_header_wrapper">
-     <div id="templatemo_menu" class="ddsmoothmenu">
-        <div class='container'>
-            <div class="navbar-collapse collapse">
-             <ul class="nav navbar-nav navbar-right">
-                <li><a href="">Home</a></li>
-                <li class=""><a href="about.html">About</a></li>
-                <li class=""><a href="/index/people">People</a></li>
-                <li class=""><a href="#">Programs</a></li>
-                <li class=""><a href="#">Research</a></li>
-                <li class=""><a href="#">Affiliates</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-              </ul>
-            </div>
-        </div>
-        <ul>
-        </ul>
-        <br style="clear: left" />
-    </div> <!-- end of templatemo_menu -->
-    <div class="cleaner"></div>
-</div>	<!-- END of templatemo_header_wrapper -->
-	<!-- END of templatemo_header_wrapper -->
-
-<div id="announcement_content_wrapper", style="padding-top:200px; padding-bottom:200px">
-	<div class = "container", style="padding-left:150px;padding-right:150px">
-		<body>
-		<h1 align="center">
-				<p>{{ announcement.title }}
-			</h1>
-			<h6>
-				<p align="justify">{{ announcement.pub_date }}
-			</h6>
-			<p align="justify">{{ announcement.body }}</li>
-		</body>
-	</div>
-</div>
-    
-    <div class="cleaner"></div>
-</div> <!-- END of templatemo_main -->
-
-<div id="templatemo_bottom_wrapper">
-    <div id="templatemo_bottom">
-    	<div class="col one_third">
-        	<h4><span></span>Navigate</h4>
-            <div class="bottom_box">
-                <ul class="footer_list">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="/index/people">People</a></li>
-                    <li><a href="">Programs</a></li>
-                    <li><a href="">Research</a></li>
-                    <li><a href="">Affiliates</a></li>
-                </ul>  
-			</div>
-        </div>
-        <div class="col one_third">
-        	<h4><span></span>Quick Links</h4>
-            <div class="bottom_box">
-                <ul class="twitter_post">
-                    <li><a href="http://www.up.edu.ph/">UP System</a></li>
-                    <li><a href="http://upd.edu.ph/">UP Diliman</a></li>
-                    <li><a href="http://coe.upd.edu.ph/">UP College of Engineering</a></li>
-                    <li><a href="https://crs.upd.edu.ph/">UP CRS</a></li>
-                    <li><a href="http://mail.up.edu.ph/">UP Webmail</a></li>
-                </ul>
-			</div>
-        </div>
-        <div class="col one_third no_margin_right">
-        	<h4><span></span>Follow Us</h4>
-            <div class="bottom_box">
-				<ul class="twitter_post">
-					<li>Velasquez St.<br>University of the Philippines<br>Diliman, Quezon City, Philippines</li>
-					<li>Tel no.: (02)434 3877</li>
-					<li>E-mail address: info@dcs.upd.edu.ph</li>
-                </ul>
-            </div>
-        </div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Department of Computer Science
+        </title>
         
-    	<div class="cleaner"></div>
-    </div> <!-- END of tempatemo_bottom -->
-</div> <!-- END of tempatemo_bottom_wrapper -->
+        <link href="/static/people/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="/static/people/jquery.js"></script>
+        <script src="/static/people/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/programs_style.css" />
+        
+        <meta name="viewport" content="width=1024, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="/static/css/Home_styles.css" />
+        <link rel="stylesheet" href="/static/css/Home_icarousel.css" />
+        <link rel="stylesheet" href="/static/css/Home_demo1.css" />
+        
+        <link rel="stylesheet" type="text/css" href="/static/css/Home_menu.css">
+        <script src="/static/js/Home_jqueryMenu.js"></script>
+        <script src="/static/js/Home_functionMenu.js"></script>
+        <script type="text/javascript" src="j/static/s/Footer_footer.js"></script>
+        
+        <style>
+            h1 { font-family: Helvetica; font-weight: bold; }
+            h3 { font-family: Helvetica; font-size: 13pt; }
+        </style>
 
-<div id="templatemo_footer_wrapper">
-    <div id="templatemo_footer">
-    	Copyright © 2014 Department of Computer Science | Designed by <a href="https://www.facebook.com/nikkodeloyola" target="_parent">Nikko Denson </a> & <a href="https://www.facebook.com/ak.cheng.7" target="_parent">Alan Kyle</a>
-    </div> <!-- END of templatemo_footer_wrapper -->
-</div> <!-- END of templatemo_footer -->
+    </head>
+    
+    <body>
+    <!--Header-->
+        <div id="wrap">
+            <header>
+                <div class="inner relative">
+                    <a class="logo" href=""><img src="/static/img/logo.png" alt="fresh design web"></a>
+                    <a id="menu-toggle" class="button dark" href="#"><i class="icon-reorder"></i></a>
+                    <nav id="navigation">
+                        <ul id="main-menu">
+                            <li class="parent"><a href="/">Home</a></li>
+                            <li class="parent">
+                                <a href="/about">About</a>
+                                <ul class="sub-menu">
+                                    <li><a href="">    About</a></li>
+                                    <li><a href="">    Mission</a></li>
+                                    <li><a href="">    Vision</a></li>
+                                    <li><a href="">    Gallery</a></li>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="/people">People</a>
+                                <ul class="sub-menu">
+                                    <li><a href="">    Faculty</a></li>
+                                    <li><a href="">    Staff</a></li>
+                                    <li><a href="">    Students</a></li>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="/programs">Programs</a>
+                                <ul class="sub-menu">
+                                    <li><a href="">    Bachelors Degree</a></li>
+                                    <li><a href="">    Masters Degree</a></li>
+                                    <li><a href="">    Doctorate Degree</a></li>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="/research">Research</a>
+                                <ul class="sub-menu">
+                                    <li><a href="">    Algorithms and Complexity Laboratory</a></li>
+                                    <li><a href="">    Computer Security Group</a></li>
+                                    <li><a href="">    Computer Vision and Machine Intelligence Group</a></li>
+                                    <li><a href="">    Networks and Distributed Systems Group</a></li>
+                                    <li><a href="">    Service Science and Software Engineering Laboratory</a></li>
+                                    <li><a href="">    Scientific Computer Laboratory</a></li>
+                                    <li><a href="">    Web Science Group</a></li>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="/affiliates">Affiliates</a>
+                                <ul class="sub-menu">
+                                    <li><a href="">    Corporate Donors</a></li>
+                                    <li><a href="">    IGLAP Partners</a></li>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="parent"><a href="/contact">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+            </header>   
+        </div>    
+        
+        <div class="boxContainerAbout">
+            <div class="boxLeftAbout">
+                <img src='/static/DCS.png' class="left"/>
+                <div class='contain-quick'>
+                    <h3 class='meh'>Quick links</h3>
+                        <hr>
+                        <p class='Quick'>
+                            <a href="http://www.up.edu.ph/">UP System</a>
+                        </br>
+                            <a href="http://upd.edu.ph/">UP Diliman</a>
+                        </br>
+                            <a href="http://coe.upd.edu.ph/">UP College of Engineering</a>
+                        </br>
+                            <a href="https://crs.upd.edu.ph/">UP CRS</a>
+                        </br>
+                            <a href="http://mail.up.edu.ph/">UP Webmail</a>
+                        </br>
+                        </p>
+                </div>
+            </div>
+            <div class="boxRightBox">
+                <img src='/static/UP.png' class="right"/>
+                <div class='contain-quick'>
+                    <h3 class='meh'>Contact Us</h3>
+                        <hr>
+                        <p class='Quick'>
+                Velasquez St.</br>
+                University of the Philippines</br>
+                Diliman, Quezon City, Philippines
+                1101</br>
+                (02)434 3877</br>
+                info@dcs.upd.edu.ph</br>
+                        </p>
+                </div>
+            </div>
+        </div>
 
-</body>
+        <!-- Announcement-->
+
+        <div class="programsBox">
+
+            <h1 align="center">
+                <p>{{ announcement.title }}
+            </h1>
+            </br>
+            </br>
+            <h5>
+                <p align="justify">{{ announcement.pub_date }}
+            </h5>
+            <p align="justify">{{ announcement.body }}</p>
+
+        </div>
+
+        <!--Announcement content ends here-->
+
+        
+    </body>
+    <footer>
+        <div class='text1'>Copyright &copy; 2014 Department of Computer Science</div>
+        <div class='text2'>Design by <a class='footer' href='www.facebook.com/nikkodeloyola'>Nikko Denson</a> and <a class='footer' href='www.facebook.com/ak.cheng.7'>Alan Cheng</a></div>
+    </footer>
+    
+        <script src="/static/js/Home_jquery-1.7.1.min.js"></script>
+        <script src="/static/js/Home_raphael-min.js"></script>
+        <script src="/static/js/Home_jquery.mousewheel.js"></script>
+        <script src="/static/js/Home_jquery.easing.1.3.js"></script>
+        <script src="/static/js/Home_icarousel.js"></script>
+
+    <!--Footer-->
+    
 </html>

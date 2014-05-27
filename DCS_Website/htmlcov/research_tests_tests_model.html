@@ -5,7 +5,7 @@
     
     
     <meta http-equiv='X-UA-Compatible' content='IE=emulateIE7' />
-    <title>Coverage for affiliates\tests: 100%</title>
+    <title>Coverage for research\tests\tests_model: 100%</title>
     <link rel='stylesheet' href='style.css' type='text/css'>
     
     <script type='text/javascript' src='jquery-1.4.3.min.js'></script>
@@ -20,7 +20,7 @@
 
 <div id='header'>
     <div class='content'>
-        <h1>Coverage for <b>affiliates\tests</b> :
+        <h1>Coverage for <b>research\tests\tests_model</b> :
             <span class='pc_cov'>100%</span>
         </h1>
         <img id='keyboard_icon' src='keybd_closed.png'>
@@ -94,20 +94,20 @@
             </td>
             <td class='text' valign='top'>
 <p id='t1' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>django</span><span class='op'>.</span><span class='nam'>test</span> <span class='key'>import</span> <span class='nam'>TestCase</span><span class='strut'>&nbsp;</span></p>
-<p id='t2' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>affiliates</span><span class='op'>.</span><span class='nam'>models</span> <span class='key'>import</span> <span class='nam'>Affiliate</span><span class='strut'>&nbsp;</span></p>
+<p id='t2' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>research</span><span class='op'>.</span><span class='nam'>models</span> <span class='key'>import</span> <span class='nam'>Lab</span><span class='op'>,</span> <span class='nam'>Field</span><span class='op'>,</span> <span class='nam'>Adviser</span><span class='strut'>&nbsp;</span></p>
 <p id='t3' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>django</span><span class='op'>.</span><span class='nam'>utils</span> <span class='key'>import</span> <span class='nam'>timezone</span><span class='strut'>&nbsp;</span></p>
 <p id='t4' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>django</span><span class='op'>.</span><span class='nam'>core</span><span class='op'>.</span><span class='nam'>urlresolvers</span> <span class='key'>import</span> <span class='nam'>reverse</span><span class='strut'>&nbsp;</span></p>
 <p id='t5' class='pln'><span class='strut'>&nbsp;</span></p>
 <p id='t6' class='pln'><span class='com'># Create your tests here.</span><span class='strut'>&nbsp;</span></p>
-<p id='t7' class='stm run hide_run'><span class='key'>class</span> <span class='nam'>AffiliatesModelTest</span><span class='op'>(</span><span class='nam'>TestCase</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
-<p id='t8' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Test for Affiliates Models&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
-<p id='t9' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>create_affiliate</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span><span class='nam'>name</span><span class='op'>=</span><span class='str'>&#39;asd&#39;</span><span class='op'>,</span> <span class='nam'>status</span><span class='op'>=</span><span class='str'>&#39;True&#39;</span><span class='op'>,</span> <span class='nam'>corporate_donor</span> <span class='op'>=</span> <span class='str'>&#39;True&#39;</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
-<p id='t10' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>Affiliate</span><span class='op'>.</span><span class='nam'>objects</span><span class='op'>.</span><span class='nam'>create</span><span class='op'>(</span><span class='nam'>name</span><span class='op'>=</span><span class='nam'>name</span><span class='op'>,</span> <span class='nam'>status</span> <span class='op'>=</span> <span class='nam'>status</span><span class='op'>,</span> <span class='nam'>corporate_donor</span> <span class='op'>=</span> <span class='nam'>corporate_donor</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t7' class='stm run hide_run'><span class='key'>class</span> <span class='nam'>LabModelTest</span><span class='op'>(</span><span class='nam'>TestCase</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t8' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Test for Lab section Models&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p id='t9' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>create_lab</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span><span class='nam'>name</span><span class='op'>=</span><span class='str'>&#39;QWQQWWW&#39;</span><span class='op'>,</span><span class='nam'>abbr</span><span class='op'>=</span><span class='str'>&#39;qwewqeqwe&#39;</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t10' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>Lab</span><span class='op'>.</span><span class='nam'>objects</span><span class='op'>.</span><span class='nam'>create</span><span class='op'>(</span><span class='nam'>name</span><span class='op'>=</span><span class='nam'>name</span><span class='op'>,</span><span class='nam'>abbr</span><span class='op'>=</span><span class='nam'>abbr</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
 <p id='t11' class='pln'><span class='strut'>&nbsp;</span></p>
-<p id='t12' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>test_aff_creation</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
-<p id='t13' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>aff</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>create_affiliate</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t14' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertTrue</span><span class='op'>(</span><span class='nam'>isinstance</span><span class='op'>(</span><span class='nam'>aff</span><span class='op'>,</span><span class='nam'>Affiliate</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t15' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertEqual</span><span class='op'>(</span><span class='nam'>aff</span><span class='op'>.</span><span class='nam'>__str__</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span><span class='nam'>aff</span><span class='op'>.</span><span class='nam'>name</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t12' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>test_lab_creation</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t13' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>lab</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>create_lab</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t14' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertTrue</span><span class='op'>(</span><span class='nam'>isinstance</span><span class='op'>(</span><span class='nam'>lab</span><span class='op'>,</span><span class='nam'>Lab</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t15' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertEqual</span><span class='op'>(</span><span class='nam'>lab</span><span class='op'>.</span><span class='nam'>__str__</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span><span class='nam'>lab</span><span class='op'>.</span><span class='nam'>name</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
 <p id='t16' class='pln'><span class='strut'>&nbsp;</span></p>
 <p id='t17' class='pln'><span class='com'># class FeildModelTest(TestCase):</span><span class='strut'>&nbsp;</span></p>
 <p id='t18' class='pln'><span class='com'>#&nbsp; &nbsp; &nbsp;&nbsp; &quot;&quot;&quot;Test for Field section Models&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>

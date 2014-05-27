@@ -4,6 +4,7 @@ from people.models import Faculty
 # Create your models here.
 
 class Lab(models.Model):
+	"""Model for Laboratories"""
 	name = models.CharField(max_length=200)
 	description = models.CharField(max_length=500)
 	abbr = models.CharField(max_length=200)
@@ -16,12 +17,14 @@ class Lab(models.Model):
 		return self.name
 		
 class Field(models.Model):
+	"""Model for laboratory fields"""
 	lab_name = models.ForeignKey(Lab)
 	field_name = models.CharField(max_length=200)
 	def __str__(self):
 		return self.field_name
 
 class Adviser(models.Model):
+	"""Model for advisers in each lab"""
 	lab_name = models.ForeignKey(Lab)
 	adviser_name = models.ForeignKey(Faculty)
 	def __str__(self):

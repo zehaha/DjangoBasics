@@ -23,7 +23,7 @@ class FacultyModelTest(TestCase):
 	def test_faculty_creation(self):
 		faculty = self.create_faculty()
 		self.assertTrue(isinstance(faculty,Faculty))
-		self.assertEqual(faculty.__str__(),return ("%s, %s %s"%(faculty.last_name,faculty.first_name,faculty.middle_name)))
+		self.assertEqual(faculty.__str__(), (faculty.last_name + ", " + faculty.first_name + " " + faculty.middle_name))
 
 class StaffModelTest(TestCase):
 	"""Test for Staff Models"""
@@ -33,7 +33,7 @@ class StaffModelTest(TestCase):
 	def test_staff_creation(self):
 		staff = self.create_staff()
 		self.assertTrue(isinstance(staff,Staff))
-		self.assertEqual(staff.__str__(),return ("%s, %s %s"%(staff.last_name,staff.first_name,staff.middle_name)))
+		self.assertEqual(staff.__str__(), (staff.last_name + ", " + staff.first_name + " " + staff.middle_name))
 
 class PeopleViewTest(TestCase):
 	def setUp(self):
