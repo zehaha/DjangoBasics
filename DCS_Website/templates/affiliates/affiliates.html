@@ -141,10 +141,12 @@
 						<h1>Corporate Donors</h1><hr>
 							{% for corporatedonor in affiliate_list %}
 								{% if corporatedonor.corporate_donor %}
+									{% if corporatedonor.status %}
 									<h3>{{ corporatedonor.name }}</h3>
 									<div class="corp"><a href={{ corporatedonor.link }}><img class = 'img-thumbnail corp pull-right' src = "/media/{{ corporatedonor.logo }}"></img></a></div>
 									<p>{{corporatedonor.description}}</p>
 									<p>{{corporatedonor.contribution}}</p>
+									{% endif %}
 								{% endif %}
 							{% endfor %}
 					</section>
@@ -155,9 +157,11 @@
 						<div class = 'row iglaprow'>
 								{% for affiliate in affiliate_list %}
 									{% if not affiliate.corporate_donor %}
+										{% if affiliate.status %}
 										<div class = 'col-md-3 iglap'>
 											<a href = {{ affiliate.link }} target="_blank" title = {{ affiliate.name }}><img class="img-thumbnail" src = "/media/{{ affiliate.logo }}"></img></a>
 										</div>
+										{% endif %}
 									{% endif %}
 								{% endfor %}														
 						</div>
