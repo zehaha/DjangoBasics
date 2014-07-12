@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      {% block title %}
+      Department of Computer Science
+      {% endblock %}
+    </title>
+  </head>
+  <body>
+    {# header #}
+    <div id="header">
+      {% block header%}
+      {% endblock %}
+    </div>
+    {# content #}
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+    {# footer #}
+    <div id="footer">
+      {% block footer %}
+      {% endblock%}
+    </div>
+  </body>
+</html>
