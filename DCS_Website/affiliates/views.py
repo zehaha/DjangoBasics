@@ -7,8 +7,7 @@ def affiliate(request):
     create context by assigning the objects to corresponding variables in the template,
     and render the page using the context and the template in the given directory.
     """
-    affiliate_list = Affiliate.objects.order_by('-name') 
-    
-    affiliate_context = {'affiliate_list' : affiliate_list,
-  	}
+    affiliate_list = Affiliate.objects.order_by('-name')
+
+    affiliate_context = {'affiliate_list' : affiliate_list}
     return render(request, 'affiliates/affiliates.html', affiliate_context)
