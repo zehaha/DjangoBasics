@@ -69,11 +69,7 @@
     {# Gallery #}
     <h1 id=gallery>Gallery</h1>
     {% for image in gallery_images %}
-      <a href="#image{{image.pk}}">
-        <img src='{{ MEDIA_URL }}{{ image.image }}' alt='{{ image.caption }}'/>
-      </a>
-      <img src="{{ MEDIA_URL }}{{image.image}}" width="100%" alt=""/>
-      {{ image.caption }}
+      <img src="{{ MEDIA_URL }}{{image.image}}" alt='{{ image.caption }}'/>
     {% endfor %}
 
 {% endblock %}
