@@ -13,8 +13,8 @@
       {% if corporatedonor.corporate_donor %}
         {% if corporatedonor.status %}
           <h2>{{ corporatedonor.name }}</h2>
-          <a href={{ corporatedonor.link }}>
-            <img class = 'img-thumbnail corp pull-right' src = "/media/{{ corporatedonor.logo }}"/>
+          <a href={{ corporatedonor.link }} target="_blank" title={{ affiliate.name }}>
+            <img src = "/media/{{ corporatedonor.logo }}"/>
           </a>
           <p>{{ corporatedonor.description }}</p>
           <p>{{ corporatedonor.contribution }}</p>
