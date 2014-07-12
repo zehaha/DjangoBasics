@@ -67,7 +67,7 @@ WSGI_APPLICATION = 'DCS_Website.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'DCS_Website_Database'),
+        'NAME': os.path.join(BASE_DIR, 'DCS_Website_Database.sqlite'),
     }
 }
 
