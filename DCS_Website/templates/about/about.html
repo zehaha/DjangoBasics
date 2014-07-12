@@ -1,269 +1,93 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>
-			Department of Computer Science
-		</title>
-		
-		<link href="/static/people/css/bootstrap.min.css" rel="stylesheet"/>
-		<script src="/static/people/jquery.js"></script>
-		<script src="/static/people/js/bootstrap.min.js"></script>
-		
-		<link rel="stylesheet" href="/static/css/programs_style.css" />
-		
-		<meta name="viewport" content="width=1024, initial-scale=1, maximum-scale=1">
-		<link rel="stylesheet" href="/static/css/Home_styles.css" />
-		<link rel="stylesheet" href="/static/css/Home_icarousel.css" />
-		<link rel="stylesheet" href="/static/css/Home_demo1.css" />
-		
-		<link rel="stylesheet" type="text/css" href="/static/css/Home_menu.css">
-		<script src="/static/js/Home_jqueryMenu.js"></script>
-		<script src="/static/js/Home_functionMenu.js"></script>
-		<script type="text/javascript" src="j/static/s/Footer_footer.js"></script>
-		
-		<style>
-			h1 { font-family: Helvetica; font-weight: bold; }
-			h3 { font-family: Helvetica; font-size: 13pt; }
-		</style>
+{% extends "content.html" %}
 
-	</head>
-	
-	<body>
-	<!--Header-->
-		<div id="wrap">
-			<header>
-				<div class="inner relative">
-					<a class="logo" href=""><img src="/static/img/logo.png" alt="fresh design web"></a>
-					<a id="menu-toggle" class="button dark" href="#"><i class="icon-reorder"></i></a>
-					<nav id="navigation">
-						<ul id="main-menu">
-							<li class="parent"><a href="/">Home</a></li>
-							<li class="current-menu-item">
-								<a href="/about">About</a>
-								<ul class="sub-menu">
-									<li><a href="">    About</a></li>
-									<li><a href="">    Mission</a></li>
-									<li><a href="">    Vision</a></li>
-									<li><a href="">    Gallery</a></li>
-									</li>
-								</ul>
-							</li>
-							<li class="parent">
-								<a href="/people">People</a>
-								<ul class="sub-menu">
-									<li><a href="">    Faculty</a></li>
-									<li><a href="">    Staff</a></li>
-									<li><a href="">    Students</a></li>
-									</li>
-								</ul>
-							</li>
-							<li class="parent">
-								<a href="/programs">Programs</a>
-								<ul class="sub-menu">
-									<li><a href="">    Bachelors Degree</a></li>
-									<li><a href="">    Masters Degree</a></li>
-									<li><a href="">    Doctorate Degree</a></li>
-									</li>
-								</ul>
-							</li>
-							<li class="parent">
-								<a href="/research">Research</a>
-								<ul class="sub-menu">
-									<li><a href="">    Algorithms and Complexity Laboratory</a></li>
-									<li><a href="">    Computer Security Group</a></li>
-									<li><a href="">    Computer Vision and Machine Intelligence Group</a></li>
-									<li><a href="">    Networks and Distributed Systems Group</a></li>
-									<li><a href="">    Service Science and Software Engineering Laboratory</a></li>
-									<li><a href="">    Scientific Computer Laboratory</a></li>
-									<li><a href="">    Web Science Group</a></li>
-									</li>
-								</ul>
-							</li>
-							<li class="parent">
-								<a href="/affiliates">Affiliates</a>
-								<ul class="sub-menu">
-									<li><a href="">    Corporate Donors</a></li>
-									<li><a href="">    IGLAP Partners</a></li>
-									</li>
-								</ul>
-							</li>
-							<li class="parent"><a href="/contact">Contact Us</a></li>
-						</ul>
-					</nav>
-					<div class="clear"></div>
-				</div>
-			</header>	
-		</div>    
-		
-		<div class="boxContainerAbout">
-			<div class="boxLeftAbout">
-				<img src='/static/DCS.png' class="left"/>
-				<div class='contain-quick'>
-					<h3 class='meh'>Quick links</h3>
-						<hr>
-						<p class='Quick'>
-							<a href="http://www.up.edu.ph/">UP System</a>
-						</br>
-							<a href="http://upd.edu.ph/">UP Diliman</a>
-						</br>
-							<a href="http://coe.upd.edu.ph/">UP College of Engineering</a>
-						</br>
-							<a href="https://crs.upd.edu.ph/">UP CRS</a>
-						</br>
-							<a href="http://mail.up.edu.ph/">UP Webmail</a>
-						</br>
-						</p>
-				</div>
-			</div>
-			<div class="boxRightBox">
-				<img src='/static/UP.png' class="right"/>
-				<div class='contain-quick'>
-					<h3 class='meh'>Contact Us</h3>
-						<hr>
-						<p class='Quick'>
-				Velasquez St.</br>
-				University of the Philippines</br>
-				Diliman, Quezon City, Philippines
-				1101</br>
-				(02)434 3877</br>
-				info@dcs.upd.edu.ph</br>
-						</p>
-				</div>
-			</div>
-		</div>
+{% block sidebar %}
+    <ul>
+	    <li><a href="#about">About</a></li>
+	    <li><a href="#mission">Mission</a></li>
+	    <li><a href="#vision">Vision</a></li>
+	    <li><a href="#gallery">Gallery</a></li>
+    </ul>
+{% endblock %}
 
+{% block sections %}
 
-		<div class='box2'>
-			<div class='contain-quick'>
-				<h1 class='meh'><font size="3pt">Navigate</font></h1>
-					<hr>
-					<p class='Quick'>
-						<a href="#about" class='about'>About</a>
-					</br>
-					</br>
-						<a href="#vision" class='about'>Vision</a>
-					</br>
-					</br>
-						<a href="#mission" class='about'>Mission</a>
-					</br>
-					</br>
-						<a href="#gallery" class='about'>Gallery</a>
-					</br>
-					</p>
-			</div>
-		</div>
+    {# About the Department #}
+    <h1 id=about>About the Department</h1>
+  		<p>The Department of Computer Science is one of the eight departments in the College of Engineering (COE),
+			University of the Philippines Diliman (UPD). the road to establishing the youngest department in COE
+			started in the mid 1970's with the institution of the Master of Engineering in Computer Science
+			(MEnng CS) program, a joint undertaking of the Department of Engineering Sciences (as the lead department), the Department of Electrical Engineering and the Department of Mathematics of the the
+			College of Science.</p>
+			<p>In the early 1980's, the MEngg CS program was suspended as the Bachelor in Computer Science (BCS) was
+			instituted. As with the master's program, the BCS program was also a joint undertaking of the ES, EE,
+			and Math departments. An initial batch of 35 shiftees from more than 200 applicants from various colleges
+			in the UPD were admitted into the program in the second semester of AY 1982-1983. Of the 35, 32 finished
+			the course, 12 with latin honors. In this first batch of Computer Science graduates was the 1986
+			Engineering class valedictorian.</p>
+			<p>In August 1988, the BOR approved the renaming of the ES department to 'Department of Engineering and
+			Computer Sciences (ECS)' to reflect the expertise available in the department. Three years later, in
+			August 1991, the ECS was split into two independent departments - taking ES back to its original name
+			(Department of Engineering Sciences) and bringing to life the Department of Computer Science (DCS). The new department took full responsibility of offering the BCS program, which was subsequently renamed
+			Bachelor of Science in Computer Science program.</p>
+			<p>In May 1995, twenty years after the institution of the
+			pioneering, but now defunct, MEngg CS program, the BOR approved the institution of a new Master of
+			Science in Computer Science (MSCS) program. Both the BSCS and MSCS program continue to attract some
+			of the best students in UP Diliman.</p>
+			<p>As of the end of the seconds semester of AY 2009-2010, the BCS/BSCS program has produced a total of
+			1191 graduates, 224 with Latin honors: 161 cum laude, 59 magna cum laude and 4 summa cum laude.</p>
+			<p>Since its establishment in 1991, seven faculty members have served as DCS chair:</p>
+			<ul>
+				<li>Prof. Evangel P. Quiwa (October 1991-October 1995)</li>
+				<li>Prof. Ma. Veronica M. Tayag (November 1995 - April 1996)</li>
+				<li>Dr. Mark J. Encarnacion (May 1996 - March 2000)</li>
+				<li>Dr. Jaime D.L. Caro (April 2000 - September 2002)</li>
+				<li>Dr. Ronald M. Tungol (October 2002 - May 2005)</li>
+				<li>Dr. Cedric Angelo M. Festin (June 2005 - May 2008)</li>
+				<li>Dr. Jaime D.L. Caro (June 2008 - April 2011)</li>
+				<li>Dr. Adrian Roy L. Valdez (March 2011 - March 2013)</li>
+				<li>Dr. Cedric Angelo M. Festin (April 2013 - March 2014)</li>
+				<li>Dr. Prospero C. Naval, Jr. (April 2014 - Present)</li>
+			</ul>
+			<p>Initially located in the College of Engineering Building (Melchor Hall), the Department of Computer
+			Science moved to its new home at the Computer Science and Engineering Library Building
+			(UP Alumni Engineers Centennial Hall) on Velasquez St., UP Diliman campus, in January 2007.</p>
 
-		<!--People Content-->
-		<div class = 'programsBox'> 
-					<section id = 'about'>
-						<h1>About the Department</h1><hr>
-						<ul>
-							<p>The Department of Computer Science is one of the eight departments in the College of Engineering (COE), 
-								University of the Philippines Diliman (UPD). the road to establishing the youngest department in COE
-								started in the mid 1970's with the institution of the Master of Engineering in Computer Science 
-								(MEnng CS) program, a joint undertaking of the Department of Engineering Sciences (as the lead department), the Department of Electrical Engineering and the Department of Mathematics of the the
-								College of Science.</p>
-							
-								<p>In the early 1980's, the MEngg CS program was suspended as the Bachelor in Computer Science (BCS) was
-								instituted. As with the master's program, the BCS program was also a joint undertaking of the ES, EE, 
-								and Math departments. An initial batch of 35 shiftees from more than 200 applicants from various colleges
-								in the UPD were admitted into the program in the second semester of AY 1982-1983. Of the 35, 32 finished 
-								the course, 12 with latin honors. In this first batch of Computer Science graduates was the 1986 
-								Engineering class valedictorian.</p>
-							
-								<p>In August 1988, the BOR approved the renaming of the ES department to 'Department of Engineering and 
-								Computer Sciences (ECS)' to reflect the expertise available in the department. Three years later, in 
-								August 1991, the ECS was split into two independent departments - taking ES back to its original name
-								(Department of Engineering Sciences) and bringing to life the Department of Computer Science (DCS). The new department took full responsibility of offering the BCS program, which was subsequently renamed
-								Bachelor of Science in Computer Science program.</p>
-							</li>
-							<li class="sub" id="section1b">
-								<p>In May 1995, twenty years after the institution of the 
-								pioneering, but now defunct, MEngg CS program, the BOR approved the institution of a new Master of 
-								Science in Computer Science (MSCS) program. Both the BSCS and MSCS program continue to attract some 
-								of the best students in UP Diliman.</p>
-							
-								<p>As of the end of the seconds semester of AY 2009-2010, the BCS/BSCS program has produced a total of 
-								1191 graduates, 224 with Latin honors: 161 cum laude, 59 magna cum laude and 4 summa cum laude.</p>
+    {# Vision #}
+		<h1 id=vision>Vision</h1>
+		<p>The Department of Computer Science will be a world-class research and teaching institution in the
+		field of Computer Science that serves the interest of the country.</p>
 
-								<p>Since its establishment in 1991, seven faculty members have served as DCS chair:</p>
-							
-							<ul>
-								<li>Prof. Evangel P. Quiwa (October 1991-October 1995)</li>
-								<li>Prof. Ma. Veronica M. Tayag (November 1995 - April 1996)</li>
-								<li>Dr. Mark J. Encarnacion (May 1996 - March 2000)</li>
-								<li>Dr. Jaime D.L. Caro (April 2000 - September 2002)</li>
-								<li>Dr. Ronald M. Tungol (October 2002 - May 2005)</li>
-								<li>Dr. Cedric Angelo M. Festin (June 2005 - May 2008)</li>
-								<li>Dr. Jaime D.L. Caro (June 2008 - April 2011)</li>
-								<li>Dr. Adrian Roy L. Valdez (March 2011 - March 2013)</li>
-								<li>Dr. Cedric Angelo M. Festin (April 2013 - present)</li>
-							</ul>
-							
-							<p>Initially located in the College of Engineering Building (Melchor Hall), the Department of Computer 
-							Science moved to its new home at the Computer Science and Engineering Library Building 
-							( UP Alumni Engineers Centennial Hall) on Velasquez St., UP Diliman campus, in January 2007.</p>
-							</li>
-						</ul>
-						<hr>
-				</section> 
-				<section id = 'vision'>
-					<h1>Vision</h1><hr>
-					<p>The Department of Computer Science will be a world-class research and teaching institution in the 
-					field of Computer Science that serves the interest of the country.</p>
-					<hr>
-				</section> 
-				<section id = 'mission'>
-					<h1>Mission</h1><hr>
-					<p>The mission of the Department of Computer Science is to produce graduates equipped with the 
-					knowledge and skills required for professional careers and advanced studies in computer science, 
-					to advance the discipline of computing through internationally-recognized research and development;
-					to foster an environment that promotes academic excellence, professionalism and social responsibility; 
-					and to address the needs of education, government and industry through extension projects and continuing
-					education programs.</p>
-					<hr>
-				</section>
-				<section id = 'gallery'>
-					<h1>Gallery</h1><hr>
-					{% for image in gallery_images %}
-						<a href="#image{{image.pk}}" data-toggle="modal">
-							<img src='{{ MEDIA_URL }}{{ image.image }}' alt='{{ image.caption }}' style="width:150px; height:150px;"/>
-							</a>
-							
-							<div class="modal fade" id="image{{image.pk}}" tabindex="-1" role="dialog" aria-labelledby="image{{image.pk}}" aria-hidden="true">
-										<div class="modal-dialog">
-											<div class="modal-content">
-												<div class="modal-header">
-													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-													<h4 class="modal-title">Gallery</h4>
-												</div>
-												<div class="modal-body" align="center">
-													<img src="{{ MEDIA_URL }}{{image.image}}" width="100%" alt="">
-													<h3><p><font color="maroon">{{image.caption}}</font></p></h3>
-													<font color="gray">Click outside the box to close image.</font>
-												</div>
-											</div>
-										</div>
+    {# Mission #}
+		<h1 id=mission>Mission</h1>
+		<p>The mission of the Department of Computer Science is to produce graduates equipped with the
+		knowledge and skills required for professional careers and advanced studies in computer science,
+		to advance the discipline of computing through internationally-recognized research and development;
+		to foster an environment that promotes academic excellence, professionalism and social responsibility;
+		and to address the needs of education, government and industry through extension projects and continuing
+		education programs.</p>
+
+	  {# Gallery #}
+		<h1 id=gallery>Gallery</h1>
+		{% for image in gallery_images %}
+			<a href="#image{{image.pk}}" data-toggle="modal">
+				<img src='{{ MEDIA_URL }}{{ image.image }}' alt='{{ image.caption }}' style="width:150px; height:150px;"/>
+				</a>
+
+				<div class="modal fade" id="image{{image.pk}}" tabindex="-1" role="dialog" aria-labelledby="image{{image.pk}}" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										<h4 class="modal-title">Gallery</h4>
 									</div>
-					{% endfor %}
-				</section> 
-			</div>
+									<div class="modal-body" align="center">
+										<img src="{{ MEDIA_URL }}{{image.image}}" width="100%" alt="">
+										<h3><p><font color="maroon">{{image.caption}}</font></p></h3>
+										<font color="gray">Click outside the box to close image.</font>
+									</div>
+								</div>
+							</div>
+						</div>
+		{% endfor %}
 
-		<!--People Content-->
-		
-		
-	</body>
-	<footer>
-		<div class='text1'>Copyright &copy; 2014 Department of Computer Science</div>
-		<div class='text2'>Design by <a class='footer' href='www.facebook.com/nikkodeloyola'>Nikko Denson</a> and <a class='footer' href='www.facebook.com/ak.cheng.7'>Alan Cheng</a></div>
-	</footer>
-	
-		<script src="/static/js/Home_jquery-1.7.1.min.js"></script>
-		<script src="/static/js/Home_raphael-min.js"></script>
-		<script src="/static/js/Home_jquery.mousewheel.js"></script>
-		<script src="/static/js/Home_jquery.easing.1.3.js"></script>
-		<script src="/static/js/Home_icarousel.js"></script>
-
-	<!--Footer-->
-	
-</html>
+{% endblock %}
