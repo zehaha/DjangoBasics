@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'images',
     'people',
     'affiliates',
+    'programs',
     'research'
 )
 
