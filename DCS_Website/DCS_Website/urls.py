@@ -4,7 +4,6 @@ from django.conf.urls.static import static
 from DCS_Website import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-
 admin.autodiscover()
 
 """Use a regular expression to request the object by its primary key and execute
@@ -13,8 +12,8 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'DCS_Website.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-
-    url(r'^$', 'DCS_Website.views.home', name='home'),
+    url(r'^$', include('home.urls')),
+    url(r'^home/', include('home.urls')),
     url(r'^events/', include('events.urls')),
     url(r'^announcements/', include('announcements.urls')),
     url(r'^about/', 'DCS_Website.views.about'),

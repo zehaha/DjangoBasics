@@ -10,15 +10,6 @@ class ViewTest(TestCase):
 	def test_view_home_route(self):
 		response = self.client_stub.get('/')
 		self.assertEquals(response.status_code, 200)
-	def test_BSCS_Curriculum_Download_route(self):
-		response = self.client_stub.get('/programs/BS CS Curriculum/download')
-		self.assertEquals(response.status_code, 200)
-	def test_MSCS_Curriculum_Download_route(self):
-		response = self.client_stub.get('/programs/MS CS Curriculum/download')
-		self.assertEquals(response.status_code, 200)
-	def test_PhDCS_Curriculum_Download_route(self):
-		response = self.client_stub.get('/programs/PhD CS Curriculum/download')
-		self.assertEquals(response.status_code, 200)
 	def test_programs_route(self):
 		response = self.client_stub.get('/programs/')
 		self.assertEquals(response.status_code, 200)
