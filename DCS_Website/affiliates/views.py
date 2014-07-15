@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from people.models import Affiliate
+from affiliates.models import Affiliate
 
 # Create your views here.
-def affiliate(request):
+def affiliates(request):
     """Fetch the requested objects with the given primary keys from the database,
     create context by assigning the objects to corresponding variables in the template,
     and render the page using the context and the template in the given directory.

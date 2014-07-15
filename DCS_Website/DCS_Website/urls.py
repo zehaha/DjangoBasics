@@ -20,7 +20,7 @@ urlpatterns = patterns('',
     url(r'^people/', include('people.urls')),
     url(r'^programs/', include('programs.urls')),
     url(r'^contact/', include('contact.urls')),
-    url(r'^affiliates/', 'DCS_Website.views.affiliates'),
+    url(r'^affiliates/', include('affiliates.urls')),
     url(r'^research/', include('research.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
