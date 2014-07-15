@@ -4,5 +4,5 @@ from research import views
 """Use a regular expression to request the object by its primary key and execute
 the corresponding view when the object is found."""
 urlpatterns = patterns('',
-	url(r'^$', views.research),
+    url(r'^$', views.research),
 )
