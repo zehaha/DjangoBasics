@@ -1,4 +1,5 @@
 from django.test import TestCase
+from django.core.urlresolvers import reverse
 
 # Create your tests here.
 class ContactViewTests(TestCase):
@@ -7,5 +8,5 @@ class ContactViewTests(TestCase):
         pass
 
     def test_contact(self):
-        response = self.client.get('/contact/')
+        response = self.client.get(reverse('contact'))
         self.assertEqual(response.status_code, 200)

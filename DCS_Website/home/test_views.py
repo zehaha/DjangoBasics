@@ -1,4 +1,5 @@
 from django.test import TestCase
+from django.core.urlresolvers import reverse
 
 # Create your tests here.
 class HomeViewTests(TestCase):
@@ -11,5 +12,5 @@ class HomeViewTests(TestCase):
         self.assertEquals(response.status_code, 200)
 
     def test_home(self):
-        response = self.client.get('/home/')
+        response = self.client.get(reverse('home'))
         self.assertEquals(response.status_code, 200)
