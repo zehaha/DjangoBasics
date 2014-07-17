@@ -4,6 +4,9 @@ from affiliates.models import Affiliate
 # Create your tests here.
 class AffiliatesModelTest(TestCase):
     """Unit tests for all the models of the affiliates app."""
+    def setUp(self):
+        pass
+
     def create_affiliate(self,name='asd', status='True', corporate_donor = 'True'):
         return Affiliate.objects.create(name=name, status = status, corporate_donor = corporate_donor)
 

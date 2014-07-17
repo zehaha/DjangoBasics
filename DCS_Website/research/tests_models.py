@@ -1,11 +1,12 @@
 from django.test import TestCase
 from research.models import Lab
-from django.utils import timezone
-from django.core.urlresolvers import reverse
 
 # Create your tests here.
 class ResearchModelTest(TestCase):
     """Unit test for all the models of the research app."""
+    def setUp(self):
+        pass
+
     def create_lab(self,name='QWQQWWW',abbr='qwewqeqwe'):
         return Lab.objects.create(name=name,abbr=abbr)
 
