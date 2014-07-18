@@ -5,7 +5,7 @@ Django-based website for the Department of Computer Science in the University of
 
 ## Requirements
 
-1. Python (see requirements.txt for details)
+1. Python (see requirements.txt)
   * Django 1.6.4 - Web Framework
   * Pillow 2.4.0 - Images
   * South 1.0 - Database Migrations
