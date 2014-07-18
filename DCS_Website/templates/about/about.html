@@ -1,15 +1,15 @@
-{% extends "content.html" %}
+{% extends "main_content.html" %}
 
-{% block sidebar %}
+{% block page_sidebar %}
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#mission">Mission</a></li>
     <li><a href="#vision">Vision</a></li>
     <li><a href="#gallery">Gallery</a></li>
   </ul>
-{% endblock %}
+{% endblock page_sidebar %}
 
-{% block sections %}
+{% block page_content %}
 
   {# About the Department #}
   <h1 id=about>About the Department</h1>
@@ -72,4 +72,4 @@
     <img src="{{ MEDIA_URL }}{{image.image}}" alt='{{ image.caption }}'/>
   {% endfor %}
 
-{% endblock %}
+{% endblock page_content %}

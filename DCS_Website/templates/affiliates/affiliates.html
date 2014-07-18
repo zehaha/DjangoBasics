@@ -1,34 +1,37 @@
-{% extends "content.html" %}
+{% extends "main_content.html" %}
 
-{% block sidebar %}
-    <ul>
-      <li><a href="#corporate">Corporate Donors</a></li>
-      <li><a href="#iglap">IGLAP Partners</a></li>
-    </ul>
-{% endblock %}
+{% block page_sidebar %}
+  <ul>
+    <li><a href="#corporate">Corporate Donors</a></li>
+    <li><a href="#iglap">IGLAP Partners</a></li>
+  </ul>
+{% endblock page_sidebar %}
 
-{% block sections %}
-    <h1 id='corporate'>Corporate Donors</h1>
-    {% for corporatedonor in affiliate_list %}
-      {% if corporatedonor.corporate_donor %}
-        {% if corporatedonor.status %}
-          <h2>{{ corporatedonor.name }}</h2>
-          <a href={{ corporatedonor.link }} target="_blank" title={{ affiliate.name }}>
-            <img src = "/media/{{ corporatedonor.logo }}"/>
-          </a>
-          <p>{{ corporatedonor.description }}</p>
-          <p>{{ corporatedonor.contribution }}</p>
-        {% endif %}
+{% block page_content %}
+
+  <h1 id='corporate'>Corporate Donors</h1>
+  {% for corporatedonor in affiliate_list %}
+    {% if corporatedonor.corporate_donor %}
+      {% if corporatedonor.status %}
+        <h2>{{ corporatedonor.name }}</h2>
+        <a href={{ corporatedonor.link }} target="_blank" title={{ affiliate.name }}>
+          <img src = "/media/{{ corporatedonor.logo }}"/>
+        </a>
+        <p>{{ corporatedonor.description }}</p>
+        <p>{{ corporatedonor.contribution }}</p>
       {% endif %}
-    {% endfor %}
-    <h1 id='iglap'>IGLAP Partners</h1>
-    {% for affiliate in affiliate_list %}
-      {% if not affiliate.corporate_donor %}
-        {% if affiliate.status %}
-          <a href = {{ affiliate.link }} target="_blank" title = {{ affiliate.name }}>
-            <img class="img-thumbnail" src = "/media/{{ affiliate.logo }}"/>
-          </a>
-        {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  <h1 id='iglap'>IGLAP Partners</h1>
+  {% for affiliate in affiliate_list %}
+    {% if not affiliate.corporate_donor %}
+      {% if affiliate.status %}
+        <a href={{ affiliate.link }} target="_blank" title={{ affiliate.name }}>
+          <img class="img-thumbnail" src = "/media/{{ affiliate.logo }}"/>
+        </a>
       {% endif %}
-    {% endfor %}
-{% endblock %}
+    {% endif %}
+  {% endfor %}
+
+{% endblock page_content %}

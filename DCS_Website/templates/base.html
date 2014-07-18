@@ -4,24 +4,26 @@
     <title>
       {% block title %}
       Department of Computer Science
-      {% endblock %}
+      {% endblock title %}
     </title>
   </head>
   <body>
     {# header #}
-    <div id="header">
-      {% block header%}
-      {% endblock %}
-    </div>
-    {# content #}
-    <div id="content">
-      {% block content %}
-      {% endblock %}
-    </div>
+    <header>
+      {% block header_content %}
+      {% endblock header_content %}
+    </header>
+
+    {# main content #}
+    <main>
+      {% block main_content %}
+      {% endblock main_content %}
+    </main>
+
     {# footer #}
-    <div id="footer">
-      {% block footer %}
-      {% endblock%}
-    </div>
+    <footer>
+      {% block footer_content %}
+      {% endblock footer_content %}
+    </footer>
   </body>
 </html>

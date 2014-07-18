@@ -1,15 +1,15 @@
-{% extends "content.html" %}
+{% extends "main_content.html" %}
 
-{% block sidebar %}
+{% block page_sidebar %}
   <ul>
     <li><a href='#bachelor'>Bachelor of Science in Computer Science</a></li>
     <li><a href='#master'>Master of Science in Computer Science</a></li>
     <li><a href='#doctor'>Doctor of Philosophy in Computer Science</a></li>
   </ul>
-{% endblock %}
+{% endblock page_sidebar %}
 
-{% block sections %}
-{% load staticfiles %}
+{% block page_content %}
+  {% load staticfiles %}
 
   <h1 id='bachelor'>Bachelor of Science in Computer Science</h1>
   <h2>Background/Rationale</h2>
@@ -34,8 +34,8 @@
     <li>Computer networks and distributed systems</li>
   </ul>
   <p>Curriculum and Complete Course Description:
-  <a href = '{% static "programs/BS CS Curriculum.pdf" %}' target = '_blank'>View on browser</a>
-  <a href = '{% static "programs/BS CS Curriculum.pdf" %}' download="BS CS Curriculum.pdf">Download</a>
+    <a href = '{% static "programs/BS CS Curriculum.pdf" %}' target = '_blank'>View on browser</a>
+    <a href = '{% static "programs/BS CS Curriculum.pdf" %}' download="BS CS Curriculum.pdf">Download</a>
   </p>
   <h1 id='master'>Master of Science in Computer Science</h1>
   <h2>Background/Rationale</h2>
@@ -69,8 +69,8 @@
     </li>
   </ol>
   <p>Curriculum and Complete Course Description:
-  <a href = '{% static "programs/MS CS Curriculum.pdf" %}' target = '_blank'>View on browser</a>
-  <a href = '{% static "programs/MS CS Curriculum.pdf" %}' download="MS CS Curriculum.pdf">Download</a>
+    <a href = '{% static "programs/MS CS Curriculum.pdf" %}' target = '_blank'>View on browser</a>
+    <a href = '{% static "programs/MS CS Curriculum.pdf" %}' download="MS CS Curriculum.pdf">Download</a>
   </p>
   <h1 id='doctor'>Doctor of Philosophy in Computer Science</h1>
   <h2>Background/Rationale</h2>
@@ -110,7 +110,7 @@
     </li>
   </ol>
   <p>Curriculum and Complete Course Description:
-  <a href = '{% static "programs/PhD CS Curriculum.pdf" %}' target = '_blank'>View on browser</a>
-  <a href = '{% static "programs/PhD CS Curriculum.pdf" %}' download="PhD CS Curriculum.pdf">Download</a>
+    <a href = '{% static "programs/PhD CS Curriculum.pdf" %}' target = '_blank'>View on browser</a>
+    <a href = '{% static "programs/PhD CS Curriculum.pdf" %}' download="PhD CS Curriculum.pdf">Download</a>
   </p>
-{% endblock %}
+{% endblock page_content %}

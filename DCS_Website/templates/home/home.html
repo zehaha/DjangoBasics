@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% block main_content %}
   <h1>UP Diliman Department of Computer Science</h1>
 
   {% for image in carousel_images %}
@@ -12,8 +12,10 @@
     <a href="/announcements/{{ announcement.pk }}/">{{ announcement.title }}</a>
 		<br/>
   {% endfor %}
+
   <h2>Events</h2>
   {% for event in latest_event_list %}
     <p>{{event.description}}</p>
   {% endfor %}
-{% endblock %}
+
+{% endblock main_content %}

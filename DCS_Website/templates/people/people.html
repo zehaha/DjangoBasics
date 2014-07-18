@@ -1,56 +1,56 @@
-{% extends "content.html" %}
+{% extends "main_content.html" %}
 
-{% block sidebar %}
+{% block page_sidebar %}
   <ul>
     <li><a href="#faculty">Faculty</a></li>
     <li><a href="#staff">Staff</a></li>
     <li><a href="#students">Students</a></li>
   </ul>
-{% endblock %}
+{% endblock page_sidebar %}
 
-{% block sections %}
+{% block page_content %}
 
-<h1 name="faculty">Faculty</h1>
-<h2>Professors</h2>
-<h2>Associate Professors</h2>
-{% for faculty in faculty_associate_list %}
-  <img src="{{ MEDIA_URL }}{{faculty.photo}}" alt="{{ faculty.first_name }} {{ faculty.last_name }}" style="width:480px; height:360px;"><br/>
-  {{faculty.first_name}} {{faculty.last_name}}<br/>
-  {{faculty.position}}<br/>
-  {{faculty.email}}</br>
-{% endfor %}
+  <h1 name="faculty">Faculty</h1>
+  <h2>Professors</h2>
+  <h2>Associate Professors</h2>
+  {% for faculty in faculty_associate_list %}
+    <img src="{{ MEDIA_URL }}{{faculty.photo}}" alt="{{ faculty.first_name }} {{ faculty.last_name }}" style="width:480px; height:360px;"><br/>
+    {{faculty.first_name}} {{faculty.last_name}}<br/>
+    {{faculty.position}}<br/>
+    {{faculty.email}}</br>
+  {% endfor %}
 
-<h2>Assistant Professors</h2>
-{% for faculty in faculty_assistant_list %}
-  <img src="{{ MEDIA_URL }}{{faculty.photo}}" alt="{{ faculty.first_name }} {{ faculty.last_name }}" style="width:480px; height:360px;"><br/>
-  {{faculty.first_name}} {{faculty.last_name}}<br/>
-  {{faculty.position}}<br/>
-  {{faculty.email}}</br>
-{% endfor %}
+  <h2>Assistant Professors</h2>
+  {% for faculty in faculty_assistant_list %}
+    <img src="{{ MEDIA_URL }}{{faculty.photo}}" alt="{{ faculty.first_name }} {{ faculty.last_name }}" style="width:480px; height:360px;"><br/>
+    {{faculty.first_name}} {{faculty.last_name}}<br/>
+    {{faculty.position}}<br/>
+    {{faculty.email}}</br>
+  {% endfor %}
 
-<h2>Instructors</h2>
-{% for faculty in faculty_instructor_list %}
-<img src="{{ MEDIA_URL }}{{faculty.photo}}" alt="{{ faculty.first_name }} {{ faculty.last_name }}" style="width:480px; height:360px;"><br/>
-{{faculty.first_name}} {{faculty.last_name}}<br/>
-{{faculty.position}}<br/>
-{{faculty.email}}</br>
-{% endfor %}
+  <h2>Instructors</h2>
+  {% for faculty in faculty_instructor_list %}
+    <img src="{{ MEDIA_URL }}{{faculty.photo}}" alt="{{ faculty.first_name }} {{ faculty.last_name }}" style="width:480px; height:360px;"><br/>
+    {{faculty.first_name}} {{faculty.last_name}}<br/>
+    {{faculty.position}}<br/>
+    {{faculty.email}}</br>
+    {% endfor %}
 
-<h2>Senior Lecturers</h2>
-<h2>Lecturers</h2>
+  <h2>Senior Lecturers</h2>
+  <h2>Lecturers</h2>
 
-<h1 id="staff">Staff</h1>
-{% for staff in staff_list %}
-  {{staff.first_name}} {{staff.last_name}}<br/>
-  Position: {{staff.position}}<br/>
-  Room: {{staff.room}}<br/>
-{% endfor %}
+  <h1 id="staff">Staff</h1>
+  {% for staff in staff_list %}
+    {{staff.first_name}} {{staff.last_name}}<br/>
+    Position: {{staff.position}}<br/>
+    Room: {{staff.room}}<br/>
+  {% endfor %}
 
-<h1 id="students">Students</h1>
-{% for student in student_list %}
-  <img src="{{ MEDIA_URL }}{{student.logo}}" height="150" width="150"><br/>
-  {{student.org_name}}<br/>
-  {{student.description | linebreaks}}<br/>
-{% endfor %}
+  <h1 id="students">Students</h1>
+  {% for student in student_list %}
+    <img src="{{ MEDIA_URL }}{{student.logo}}" height="150" width="150"><br/>
+    {{student.org_name}}<br/>
+    {{student.description | linebreaks}}<br/>
+  {% endfor %}
 
-{% endblock %}
+{% endblock page_content %}
