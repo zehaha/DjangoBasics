@@ -68,10 +68,21 @@ WSGI_APPLICATION = 'DCS_Website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
+# sqlite config
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'DCS_Website_Database.sqlite'),
+#    }
+#}
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'DCS_Website_Database.sqlite'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dcswebsite',
+        'USER': 'dcswebteam',
+        'PASSWORD': 'dcsw3bt3am',
+        'HOST': 'localhost'
     }
 }
 
