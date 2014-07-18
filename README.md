@@ -15,7 +15,6 @@ Django-based website for the Department of Computer Science in the University of
 2. PostgreSQL (database)
 3. libpq-dev (for connecting PostgreSQL to Python)
 4. python-dev (for embedding Python in applications)
-5.
 
 ## Setup
 --------
