@@ -2,19 +2,34 @@
 
 {% block main_content %}
 
-  {% for image in carousel_images %}
-    <img src="{{ MEDIA_URL }}{{ image.image }}" style="width:480px; height:360px;">
-  {% endfor %}
+  {% if carousel_images %}
+    {% for image in carousel_images %}
+      <img src="{{ MEDIA_URL }}{{ image.image }}" style="width:480px; height:360px;">
+    {% endfor %}
+  {% else %}
+    There are no images to show.
+  {% endif %}
 
   <h2>Announcements</h2>
-  {% for announcement in latest_announcement_list %}
-    <a href="/announcements/{{ announcement.pk }}/">{{ announcement.title }}</a>
-		<br/>
-  {% endfor %}
+  {% if latest_announcement_list %}
+    <ul>
+      {% for announcement in latest_announcement_list %}
+        <li><a href="/announcements/{{ announcement.pk }}/">{{ announcement.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    There are no announcements to show.
+  {% endif %}
 
   <h2>Events</h2>
-  {% for event in latest_event_list %}
-    <p>{{event.description}}</p>
-  {% endfor %}
+  {% if latest_event_list %}
+    <ul>
+      {% for event in latest_event_list %}
+        <li>{{ event.description }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    There are no events to show.
+  {% endif %}
 
 {% endblock main_content %}
