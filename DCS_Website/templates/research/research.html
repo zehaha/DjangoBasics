@@ -1,0 +1,35 @@
+{% extends "main_content.html" %}
+
+{% block page_sidebar %}
+  <ul>
+  {% for lab in lab_list %}
+    <li><a href="#{{lab.abbr}}">{{ lab.name }} ({{ lab.abbr }})</a></li>
+  {% endfor %}
+  </ul>
+{% endblock page_sidebar %}
+
+{% block page_content %}
+  {% for lab in lab_list %}
+    <h1 id="{{ lab.abbr }}">{{lab.name}} ({{lab.abbr}})</h1>
+    <p>{{lab.description}}</p>
+
+    <h2>Research Fields</h2>
+
+    <ul>
+      {% for field in  lab.field_set.all%}
+        <li>{{field.field_name}}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Laboratory Head</h2>
+    {{lab.head}}
+    <h2>Advisers</h2>
+
+    <ul>
+      {% for adviser in  lab.adviser_set.all%}
+        <li>{{adviser.adviser_name}}</li>
+      {% endfor %}
+    </ul>
+
+  {% endfor %}
+{% endblock page_content %}

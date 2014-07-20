@@ -1,0 +1,3 @@
+*.pyc
+*.sqlite*
+DCS_Website/static
