@@ -10,8 +10,15 @@
   <body>
     {# header #}
     <header>
-      {% block header_content %}
-      {% endblock header_content %}
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'people' %}">People</a></li>
+        <li><a href="{% url 'programs' %}">Programs</a></li>
+        <li><a href="{% url 'research' %}">Research</a></li>
+        <li><a href="{% url 'affiliates' %}">Affiliates</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </ul>
     </header>
 
     {# main content #}
