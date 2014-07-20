@@ -68,8 +68,12 @@
 
   {# Gallery #}
   <h1 id=gallery>Gallery</h1>
-  {% for image in gallery_images %}
-    <img src="{{ MEDIA_URL }}{{image.image}}" alt='{{ image.caption }}'/>
-  {% endfor %}
+  {% if gallery_images %}
+    {% for image in gallery_images %}
+      <img src="{{ MEDIA_URL }}{{image.image}}" alt='{{ image.caption }}'/>
+    {% endfor %}
+  {% else %}
+    There are no images to show.
+  {% endif %}
 
 {% endblock page_content %}
