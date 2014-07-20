@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block main_content %}
-  <h1>UP Diliman Department of Computer Science</h1>
 
   {% for image in carousel_images %}
     <img src="{{ MEDIA_URL }}{{ image.image }}" style="width:480px; height:360px;">
